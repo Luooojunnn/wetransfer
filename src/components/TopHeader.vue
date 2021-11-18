@@ -5,10 +5,9 @@
       <div class="deMac">DeMac</div>
     </div>
     <div class="TopHeader-menus">
-      <div class="menus-active">Home</div>
-      <div>Lend</div>
-      <div>Farm</div>
-      <div>Bonus</div>
+      <div v-for="item in lists" :key="item" @click="goto(item)" :class="{'menus-active':item === curAc }">
+        {{item}}
+      </div>
     </div>
     <div class="end-menus">
       <div class="yuyan-menus">
@@ -23,7 +22,28 @@
 <script>
 export default {
   name: "TopHeader",
-  components: {},
+  data() {
+    return {
+      lists:[
+         'Home',
+         'Lend',
+         'Farm',
+         'Bonus'
+      ],
+      curAc: 'Home'
+    }
+  },
+  methods: {
+    goto(l) {
+      this.curAc = l
+      this.$router.push(
+        { path: l, query: {  }}
+      )
+    }
+  },
+  components: {
+    // currentAc: 'Home'
+  },
 };
 </script>
 
@@ -35,6 +55,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 .icon-wrap {
   display: flex;

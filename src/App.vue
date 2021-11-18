@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style>
+body{
+  background: #111111;
+  color: #fff;
+}
 *{
   padding: 0;
   margin: 0;
