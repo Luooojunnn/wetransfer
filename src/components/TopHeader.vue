@@ -5,13 +5,14 @@
       <div class="deMac">DeMac</div>
     </div>
     <div class="TopHeader-menus">
-      <div class="menus-active">Home</div>
-      <div>Lend</div>
-      <div>Farm</div>
-      <div>Bonus</div>
+      <div v-for="item in lists" :key="item" @click="goto(item)" :class="{'menus-active':item === curAc }">
+        {{item}}
+      </div>
     </div>
     <div class="end-menus">
-      <div class="yuyan-menus">yuyan</div>
+      <div class="yuyan-menus">
+        <span class="yuyan-menus-icon"></span>
+        English</div>
       <div class="Swap-menus">Swap</div>
       <div class="Wallet-menus">Wallet</div>
     </div>
@@ -21,7 +22,28 @@
 <script>
 export default {
   name: "TopHeader",
-  components: {},
+  data() {
+    return {
+      lists:[
+         'Home',
+         'Lend',
+         'Farm',
+         'Bonus'
+      ],
+      curAc: 'Home'
+    }
+  },
+  methods: {
+    goto(l) {
+      this.curAc = l
+      this.$router.push(
+        { path: l, query: {  }}
+      )
+    }
+  },
+  components: {
+    // currentAc: 'Home'
+  },
 };
 </script>
 
@@ -33,6 +55,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 .icon-wrap {
   display: flex;
@@ -78,5 +101,17 @@ background-size: cover;
 px
 ;
   background-image: url(../assets/icon.png);
+}
+.end-menus{
+  display: flex;
+}
+.end-menus>div{
+  margin-right: 10px;
+}
+.yuyan-menus{
+  color:#9439FF;
+}
+.yuyan-menus-icon{
+  
 }
 </style>

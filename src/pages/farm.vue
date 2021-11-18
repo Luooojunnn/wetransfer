@@ -5,8 +5,11 @@
         <img src="../assets/bct.png" alt="" class="notice-img" />
         <p>Notice：Important message notification window</p>
       </div>
-      <img src="../assets/farm-title.png" alt="" class="farm-title-img" />
-      <div class="farm-position">
+      <div class="page-big-tit">
+        <span class="big-tit">High Profit Leverage Farm</span>
+      </div>
+      <!-- <img src="../assets/home-title.png" alt="" class="home-title" /> -->
+      <div class="home-position">
         <div class="position-title row">
           <img src="../assets/bct.png" alt="" class="notice-img" />
           <p>Your position</p>
@@ -431,4 +434,13 @@ export default {
   border-radius: 50%;
   margin-right: 8px;
 }
+.page-big-tit .big-tit{
+  width: 549px;
+height: 57px;
+font-size: 60px;
+font-family: Barlow Condensed;
+font-weight: 600;
+color: #FFFFFF;
+text-align: center;
+} 
 </style>
