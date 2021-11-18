@@ -11,7 +11,9 @@
       <div>Bonus</div>
     </div>
     <div class="end-menus">
-      <div class="yuyan-menus">yuyan</div>
+      <div class="yuyan-menus">
+        <span class="yuyan-menus-icon"></span>
+        English</div>
       <div class="Swap-menus">Swap</div>
       <div class="Wallet-menus">Wallet</div>
     </div>
@@ -78,5 +80,17 @@ background-size: cover;
 px
 ;
   background-image: url(../assets/icon.png);
+}
+.end-menus{
+  display: flex;
+}
+.end-menus>div{
+  margin-right: 10px;
+}
+.yuyan-menus{
+  color:#9439FF;
+}
+.yuyan-menus-icon{
+  
 }
 </style>
