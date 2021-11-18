@@ -1,10 +1,11 @@
 <template>
   <div class="page">
     <div class="main">
-      <div class="notic row">
+      <!-- <div class="notic row">
         <img src="../assets/bct.png" alt="" class="notice-img" />
         <p>Notice：Important message notification window</p>
-      </div>
+      </div> -->
+      <Notice></Notice> 
       <div class="home-title-box">
         <p class="home-title">New Era for</p>
         <p class="home-title">Lend & Leverage Yield Farm</p>
@@ -96,6 +97,9 @@
 <script>
 import Notice from "../components/Notice";
 export default {
+  components: {
+    Notice,
+  },
   data() {
     return {
       lendList: [
