@@ -1,7 +1,34 @@
 .f14{
     font-size: 14px;
 }
-
+.f20{
+    font-size: 20px;
+}
 .purple-text {
     color: #9439ff;
 }
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.page {
+    background: #000;
+    color: #fff;
+  }
+  .notic {
+    width: 84%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto 46px;
+    font-size: 24px;
+    justify-content: center;
+    background: url("../assets/bg.png") center center no-repeat;
+    background-size: cover;
+    font-family: Barlow Condensed;
+  }
+  .notice-img {
+    width: 23px;
+    height: 27px;
+    margin-right: 42px;
+  }

@@ -5,8 +5,8 @@
         <img src="../assets/bct.png" alt="" class="notice-img" />
         <p>Notice：Important message notification window</p>
       </div>
-      <img src="../assets/home-title.png" alt="" class="home-title" />
-      <div class="home-position">
+      <img src="../assets/farm-title.png" alt="" class="farm-title-img" />
+      <div class="farm-position">
         <div class="position-title row">
           <img src="../assets/bct.png" alt="" class="notice-img" />
           <p>Your position</p>
@@ -30,7 +30,7 @@
             <th width="25%">Asset</th>
             <th width="12%">Debt</th>
             <th width="12%">
-              APY<img src="../assets/bct.png" alt="" class="tip-img" />
+              APY<img src="../assets/tip.png" alt="" class="tip-img" />
             </th>
             <th width="12%">Risk</th>
             <th width="29%"></th>
@@ -77,7 +77,7 @@
         <div class="farm-right">
           <div class="farm-ipt-box">
             <input type="text" class="farm-ipt" />
-            <img src="../assets/bct.png" alt="" class="ipt-img" />
+            <img src="../assets/search-icon.png" alt="" class="ipt-img" />
           </div>
           <div class="farm-right-bottom">
             <img src="../assets/bct.png" alt="" class="farm-img" />
@@ -92,7 +92,7 @@
           <div class="tvl">tvl</div>
           <div class="dema">DEMA/w</div>
           <div class="apy">
-            APY<img src="../assets/bct.png" alt="" class="tip-img" />
+            APY<img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="last"></div>
         </div>
@@ -109,7 +109,7 @@
           <div class="tvl">{{ item.tvl }}</div>
           <div class="dema">{{ item.dema }}</div>
           <div class="apy">
-            {{ item.apy }}<img src="../assets/bct.png" alt="" class="tip-img" />
+            {{ item.apy }}<img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="last">
             <div class="last-btn purple-text">3x Farm</div>
@@ -169,15 +169,6 @@ export default {
 </script>
 
 <style>
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.page {
-  background: #000;
-  color: #fff;
-}
 .main {
   width: 1040px;
   margin: 0 auto;
@@ -186,22 +177,8 @@ export default {
   position: relative;
   z-index: 1;
 }
-.notic {
-  width: 84%;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto 46px;
-  font-size: 24px;
-  justify-content: center;
-  background: url("../assets/bg.png") center center no-repeat;
-  background-size: cover;
-}
-.notice-img {
-  width: 23px;
-  height: 27px;
-  margin-right: 42px;
-}
-.home-title {
+
+.farm-title-img {
   width: 549px;
   margin: 0 auto;
   margin-bottom: 43px;
@@ -427,6 +404,8 @@ export default {
   width: 18px;
   height: 18px;
   margin-left: 8px;
+  position: relative;
+  top: -2px;
 }
 .bottom {
   width: 100%;
