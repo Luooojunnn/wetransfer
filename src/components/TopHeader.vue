@@ -15,7 +15,7 @@
         English
       </div>
       <div class="Swap-menus">Swap</div>
-      <div class="Wallet-menus" @click="linkToMateMask">Wallet</div>
+      <div class="Wallet-menus" @click="showLoginToMetaMask">Wallet</div>
     </div>
   </div>
 </template>
@@ -36,12 +36,8 @@ export default {
     },
     
     
-    async linkToMateMask() {
-      const provider = new this.$ethers.providers.Web3Provider(window.ethereum, "any");
-      // Prompt user for account connections
-      await provider.send("eth_requestAccounts", []);
-      const signer = provider.getSigner();
-      console.log("Account:", await signer.getAddress());
+    async showLoginToMetaMask() {
+      this.$emit('change-login-toast')
 
       //       const provider = new this.$ethers.providers.Web3Provider(window.ethereum)
       // //Metamask插件支持签名交易和信息，来发送交易信息改变区块链的状态

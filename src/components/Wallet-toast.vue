@@ -3,11 +3,11 @@
     <div id="Wallet-toast">
       <div class="Wallet-toast-title">
         <span class="Wallet-toast-title-desc">{{ title }}</span>
-        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" />
+        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" @click="close" />
       </div>
       <div class="Wallet-toast-detail-wrap">
         <div class="Wallet-toast-detail-wrap-item">
-          <div v-if="!isLogin" class="Wallet-toast-detail-wrap-item-no-login">
+          <div v-if="!isLogin" class="Wallet-toast-detail-wrap-item-no-login" @click="showLoginMetaMask">
             <div>
               <img src="../assets/huli.png" alt="" class="Wallet-toast-title-notice-huli" />
             </div>
@@ -38,22 +38,39 @@
 </template>
 
 <script>
+import {getSigner} from '../utils/index'
 export default {
+  props:{
+    // isLogin: Boolean
+  },
   data() {
     return {
       title: "Connect Wallet",
-      isLogin: false,
+      isLogin:false
     };
   },
   mounted() {
-    this.getLogin();
+    // this.getLogin();
+    // this.showLoginMetaMask();
   },
   methods: {
-    getLogin() {
-      setTimeout(() => {
-        this.title = "Account";
+    
+    close() {
+      this.$emit("change-login-toast");
+    },
+    async showLoginMetaMask() {
+      const res = await getSigner(this);
+      if(res) {
+        this.title = res+"Account";
         this.isLogin = true;
-      }, 3000);
+        // this.$emit("change-isLogin-status", res);
+
+      }
+      // const provider = new this.$ethers.providers.Web3Provider(window.ethereum, "any");
+      // // Prompt user for account connections
+      // await provider.send("eth_requestAccounts", []);
+      // const signer = provider.getSigner();
+      // console.log("Account:", await signer.getAddress());
     },
   },
 };
@@ -177,6 +194,7 @@ height: 17px; */
 .Wallet-toast-detail-wrap-item-no-login {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .lanquan-wrap,
 .Copy-Address-BSC-wrap {
