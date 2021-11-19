@@ -42,7 +42,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .Home-wrap-tit-wrap {
   margin-top: 23px;
 }

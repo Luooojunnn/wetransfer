@@ -32,3 +32,79 @@
     height: 27px;
     margin-right: 42px;
   }
+/* 彩色表格 */
+.farm-table {
+  width: 100%;
+  color: #fff;
+}
+
+.farm-table-item,
+.farm-table-thead {
+  text-align: center;
+  font-size: 24px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px 0;
+  background: url("../assets/bg.png") center center no-repeat;
+  background-size: cover;
+}
+
+.farm-table-item {
+  background: #1a1125;
+  border: 1px transparent solid;
+  border-radius: 28px;
+  position: relative;
+}
+
+.farm-table-item:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(157deg, #a4e1c2, #9439ff);
+  border-radius: 28px;
+  content: "";
+  z-index: -1;
+}
+.farm-table-item-img {
+  width: 49px;
+  height: 30px;
+  margin-right: 18px;
+  margin-left: 12px;
+}
+.farm-table .last {
+  width: 15%;
+}
+
+.farm-table .last-btn {
+  width: 100px;
+  height: 40px;
+  background: rgba(148, 57, 255, 0.1);
+  border: 1px solid #9439ff;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 40px;
+  float: right;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* 问号 */
+.tip-img {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  position: relative;
+  top: -2px;
+}
+/* 按钮 */
+.tip-img:hover,
+.last-btn:hover,
+.table-btn:hover,
+.farm-right .farm-right-bottom p:hover,
+.list-item-btn:hover{
+ cursor: pointer;
+}
+  /* end */
