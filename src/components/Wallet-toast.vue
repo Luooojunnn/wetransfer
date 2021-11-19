@@ -155,7 +155,7 @@ export default {
   width: 20px;
   height: 23px;
   margin-right: 15px;
-  vertical-align: middle;
+  vertical-align: sub;
 }
 .Copy-Address,
 .BSC {

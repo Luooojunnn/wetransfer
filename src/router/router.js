@@ -6,7 +6,7 @@ const routes = [
     { path: '/farm', component: resolve => require(['../pages/farm'], resolve)},
     { path: '/lend', component: resolve => require(['../pages/lend'], resolve)},
 
-    { path: '/test', component: resolve => require(['../components/Wallet-toast'], resolve)},
+    { path: '/test', component: resolve => require(['../components/Wa-kuang'], resolve)},
 
 
 ];
