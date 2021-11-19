@@ -5,6 +5,9 @@ const routes = [
     { path: '/sy', component: resolve => require(['../pages/sy'], resolve)},
     { path: '/farm', component: resolve => require(['../pages/farm'], resolve)},
 
+    { path: '/test', component: resolve => require(['../components/Wallet-toast'], resolve)},
+
+
 ];
 
 export default routes
