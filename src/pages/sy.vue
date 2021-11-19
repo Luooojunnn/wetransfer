@@ -5,7 +5,7 @@
         <img src="../assets/bct.png" alt="" class="notice-img" />
         <p>Notice：Important message notification window</p>
       </div> -->
-      <Notice></Notice> 
+      <Notice></Notice>
       <div class="home-title-box">
         <p class="home-title">New Era for</p>
         <p class="home-title">Lend & Leverage Yield Farm</p>
@@ -91,14 +91,17 @@
         </div>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Notice from "../components/Notice";
+import Footer from "../components/Footer";
 export default {
   components: {
     Notice,
+    Footer,
   },
   data() {
     return {
@@ -133,6 +136,7 @@ export default {
 }
 .home-title-box {
   margin-bottom: 44px;
+  margin-top: 22px;
 }
 .home-title {
   line-height: 82px;
@@ -141,6 +145,7 @@ export default {
   background: linear-gradient(90deg, #a4e1c2 26%, #9439ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .home-number {

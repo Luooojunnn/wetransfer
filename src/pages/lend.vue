@@ -3,86 +3,16 @@
     <div class="main">
       <Notice></Notice>
       <div class="page-big-tit">
-        <span class="big-tit">High Profit Leverage Farm</span>
+        <span class="big-tit">Low Risk Farm</span>
       </div>
-      <!-- <img src="../assets/home-title.png" alt="" class="home-title" /> -->
-      <div class="home-position">
+      <div class="bct row">
         <div class="position-title row">
           <img src="../assets/bct.png" alt="" class="position-img" />
           <p>Your position</p>
         </div>
-      </div>
-      <div class="bct row">
-        <div class="row">
-          <img src="../assets/bct.png" alt="" class="bct-img" />
-          <p>BCT/usdt</p>
-        </div>
         <div class="row">
           <p>5MDX+6DEMA</p>
-
           <img src="../assets/bct.png" alt="" class="gift-img" />
-        </div>
-      </div>
-      <div class="bct-box">
-        <table class="table">
-          <tr>
-            <th width="10%">#</th>
-            <th width="25%">Asset</th>
-            <th width="12%">Debt</th>
-            <th width="12%">
-              APY<img src="../assets/tip.png" alt="" class="tip-img" />
-            </th>
-            <th width="12%">Risk</th>
-            <th width="29%"></th>
-          </tr>
-          <tr v-for="(item, index) in bctList" :key="index">
-            <td>{{ item.no }}</td>
-            <td>
-              {{ item.asset }}
-              <p class="f14">USDT</p>
-            </td>
-            <td>
-              {{ item.debt }}
-              <p class="f14">USDT</p>
-            </td>
-            <td>
-              {{ item.apy }}
-              <p class="f14">%</p>
-            </td>
-            <td>
-              {{ item.risk }}
-              <p class="f14">%</p>
-            </td>
-            <td class="row" style="justify-content: flex-end">
-              <div class="table-btn">Add</div>
-              <div class="table-btn">Redeem</div>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="farm-title">Farm</div>
-      <div class="farm-content">
-        <div class="farm-left">
-          <div class="farm-left-top row">
-            <p>Leverage</p>
-            <p>Leverage-Plus</p>
-          </div>
-          <ul class="farm-list row">
-            <li class="farm-active">ALL</li>
-            <li>USDT</li>
-            <li>BUSD</li>
-            <li>Others</li>
-          </ul>
-        </div>
-        <div class="farm-right">
-          <div class="farm-ipt-box">
-            <input type="text" class="farm-ipt" />
-            <img src="../assets/search-icon.png" alt="" class="ipt-img" />
-          </div>
-          <div class="farm-right-bottom">
-            <img src="../assets/bct.png" alt="" class="farm-img" />
-            <p>Impermanent Loss Calculator</p>
-          </div>
         </div>
       </div>
 
@@ -90,33 +20,98 @@
         <div class="farm-table-thead row">
           <div style="width: 5%"></div>
           <div class="pool">Pool</div>
-          <div class="tvl">tvl</div>
-          <div class="dema">DEMA/w</div>
-          <div class="apy">
-            APY<img src="../assets/tip.png" alt="" class="tip-img" />
-          </div>
+          <div class="balance">Balance</div>
+          <div class="apy">APY</div>
+          <div class="reward">Reward</div>
           <div class="last"></div>
         </div>
         <div
           class="farm-table-item row"
-          v-for="(item, index) in farmTable"
+          v-for="(item, index) in lendList"
           :key="index"
         >
           <div style="width: 5%">
-            <img src="../assets/bct.png" alt="" class="farm-table-item-img" />
+            <img
+              src="../assets/list-icon.png"
+              alt=""
+              class="farm-table-item-img"
+            />
           </div>
           <div class="pool">
-            {{ item.pool }}
+            {{ item.pool }}<span class="bitconin">Bitcoin</span>
           </div>
-          <div class="tvl">{{ item.tvl }}</div>
-          <div class="dema">{{ item.dema }}</div>
+          <div class="balance">{{ item.balance }}</div>
           <div class="apy">
-            {{ item.apy }}<img src="../assets/tip.png" alt="" class="tip-img" />
+            {{ item.apy }}<span class="f14">%</span
+            ><img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
-          <div class="last">
-            <div class="last-btn purple-text">3x Farm</div>
+          <div class="reward">
+            {{ item.reward }}
+          </div>
+          <div class="last row">
+            <div class="last-btn purple-text">Deposit</div>
+            <div class="last-btn purple-text">Withdraw</div>
           </div>
         </div>
+      </div>
+
+      <div class="farm-content row">
+        <p class="lend-title">Lend</p>
+        <div class="farm-ipt-box">
+          <input type="text" class="farm-ipt" />
+          <img src="../assets/search-icon.png" alt="" class="ipt-img" />
+        </div>
+      </div>
+
+      <div class="farm-table">
+        <div class="farm-table-thead row">
+          <div style="width: 7%"></div>
+          <div class="pool2">Pool</div>
+          <div class="tvl">TVL</div>
+          <div class="utilization">Utilization</div>
+          <div class="dmc">DEMA/w</div>
+          <div class="apy2">
+            APY<img src="../assets/tip.png" alt="" class="tip-img" />
+          </div>
+          <div class="last2"></div>
+        </div>
+        <div
+          class="farm-table-item row"
+          v-for="(item, index) in list2"
+          :key="index"
+        >
+          <div style="width: 7%">
+            <img
+              src="../assets/list-icon.png"
+              alt=""
+              class="farm-table-item-img"
+            />
+          </div>
+          <div class="pool2">
+            {{ item.pool }}<span class="bitconin">Bitcoin</span>
+          </div>
+          <div class="tvl">{{ item.tvl }}</div>
+          <div class="utilization">
+            {{ item.utilization }}<span class="f14">%</span>
+          </div>
+          <div class="dmc">{{ item.dmc }}</div>
+          <div class="apy2">
+            {{ item.apy }}<span class="f14">%</span
+            ><img src="../assets/tip.png" alt="" class="tip-img" />
+          </div>
+          <div class="last2">
+            <div class="last-btn purple-text">Deposit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom row">
+      <p>Docs</p>
+      <p>faq</p>
+      <p>Audit</p>
+      <div class="row">
+        <img src="../assets/bct.png" alt="" class="bottom-icon" />
+        <img src="../assets/bct.png" alt="" class="bottom-icon" />
       </div>
     </div>
     <Footer></Footer>
@@ -125,6 +120,7 @@
 
 <script>
 import Notice from "../components/Notice";
+
 import Footer from "../components/Footer";
 export default {
   components: {
@@ -133,34 +129,28 @@ export default {
   },
   data() {
     return {
-      bctList: [
+      lendList: [
         {
-          no: "12347",
-          asset: "436,560,460.71",
-          debt: "2.50k",
-          apy: "350.12",
-          risk: "60.12",
-        },
-        {
-          no: "12347",
-          asset: "436,560,460.71",
-          debt: "2.50k",
-          apy: "350.12",
-          risk: "60.12",
+          pool: "BCT",
+          balance: "400.25",
+          apy: "10.12",
+          reward: "10 MDX+ 50 DEMA",
         },
       ],
-      farmTable: [
+      list2: [
         {
-          pool: "BCT/usdt",
+          pool: "BCT",
           tvl: "256,571,210.52",
-          dema: "9,000",
-          apy: "2033.12%",
+          utilization: "9,000",
+          dmc: "9,000",
+          apy: "2033.12",
         },
         {
-          pool: "BCT/usdt",
+          pool: "BCT",
           tvl: "256,571,210.52",
-          dema: "9,000",
-          apy: "2033.12%",
+          utilization: "9,000",
+          dmc: "9,000",
+          apy: "2033.12",
         },
       ],
     };
@@ -186,7 +176,6 @@ export default {
 }
 .position-title {
   margin-bottom: 12px;
-  font-size: 24px;
 }
 .position-img{
   width: 32px;
@@ -230,32 +219,11 @@ export default {
   z-index: -1;
 }
 
-.farm-table,
-.table {
+.farm-table {
   width: 100%;
   text-align: center;
 }
-.table th {
-  font-size: 24px;
-}
-.table td {
-  line-height: 26px;
-  height: 74px;
-  font-size: 28px;
-}
-.table-btn {
-  background: rgba(148, 57, 255, 0.1);
-  color: #9439ff;
-  min-width: 80px;
-  padding: 12px;
-  border: 1px solid #9439ff;
-  border-radius: 16px;
-  text-align: center;
-  font-size: 20px;
-}
-.table td .table-btn:first-child {
-  margin-right: 17px;
-}
+
 .farm-title {
   font-size: 48px;
   font-weight: bold;
@@ -265,7 +233,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
+  margin-top: 94px;
+}
+.farm-content .lend-title {
+  font-size: 48px;
 }
 .farm-left {
   font-size: 30px;
@@ -289,7 +261,6 @@ export default {
   margin-right: 30px;
 }
 .farm-ipt-box {
-  margin-bottom: 22px;
   position: relative;
 }
 .farm-ipt {
@@ -362,39 +333,57 @@ export default {
   z-index: -1;
 }
 .farm-table-item-img {
-  width: 49px;
+  width: 34px;
   height: 30px;
   margin-right: 18px;
   margin-left: 12px;
 }
-.farm-table-item .tvl,
-.farm-table-item .dema,
-.farm-table-item .apy {
-  font-size: 28px;
-}
 
 .farm-table .pool {
-  width: 20%;
+  width: 15%;
 }
 
-.farm-table .tvl {
-  width: 20%;
-}
-
-.farm-table .dema {
+.farm-table .balance {
   width: 15%;
 }
 
 .farm-table .apy {
+  width: 17%;
+}
+.farm-table .reward {
+  width: 30%;
+}
+.farm-table .pool2 {
+  width: 10%;
+}
+.farm-table .tvl {
   width: 25%;
 }
-
-.farm-table .last {
+.farm-table .utilization {
+  width: 13%;
+}
+.farm-table .dmc {
   width: 15%;
+}
+.farm-table .apy2 {
+  width: 15%;
+}
+.farm-table .last2 {
+  width: 15%;
+}
+.farm-table .last {
+  width: 28%;
+}
+.farm-table-item {
+  font-size: 24px;
+}
+.farm-table-item .bitconin {
+  font-size: 14px;
+  margin-left: 6px;
 }
 
 .farm-table .last-btn {
-  width: 100px;
+  width: auto;
   height: 40px;
   background: rgba(148, 57, 255, 0.1);
   border: 1px solid #9439ff;
@@ -404,8 +393,40 @@ export default {
   float: right;
   margin-right: 8px;
   font-size: 20px;
+  padding: 0 24px;
 }
 
+.tip-img {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  position: relative;
+  top: -2px;
+}
+.bottom {
+  width: 100%;
+  height: 80px;
+  background: #080808;
+  font-size: 20px;
+  color: #6b6b6b;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  z-index: 100;
+}
+.bottom p {
+  margin-right: 14px;
+}
+.bottom .row {
+  margin-left: 16px;
+}
+.bottom-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 .page-big-tit .big-tit {
   width: 549px;
   height: 57px;
@@ -418,5 +439,9 @@ export default {
 .page-big-tit {
   text-align: center;
   margin: 46px 0;
+}
+.table-icon {
+  width: 34px;
+  height: 34px;
 }
 </style>
