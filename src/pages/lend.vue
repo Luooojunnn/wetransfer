@@ -49,8 +49,8 @@
             {{ item.reward }}
           </div>
           <div class="last row">
-            <div class="last-btn purple-text">Deposit</div>
-            <div class="last-btn purple-text">Withdraw</div>
+            <div class="last-btn purple-text" @click="depositToastShow=true">Deposit</div>
+            <div class="last-btn purple-text" @click="withdrawToastShow=true">Withdraw</div>
           </div>
         </div>
       </div>
@@ -100,21 +100,16 @@
             ><img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="last2">
-            <div class="last-btn purple-text">Deposit</div>
+            <div class="last-btn purple-text" @click="depositToastShow=true">Deposit</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bottom row">
-      <p>Docs</p>
-      <p>faq</p>
-      <p>Audit</p>
-      <div class="row">
-        <img src="../assets/bct.png" alt="" class="bottom-icon" />
-        <img src="../assets/bct.png" alt="" class="bottom-icon" />
-      </div>
-    </div>
     <Footer></Footer>
+    <!-- 弹窗 -->
+    <DepositToast @closeDepositToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
+    <WithdrawToast @closeWithdrawToast="withdrawToastShow=false" v-if="withdrawToastShow"></WithdrawToast>
+
   </div>
 </template>
 
@@ -122,10 +117,14 @@
 import Notice from "../components/Notice";
 
 import Footer from "../components/Footer";
+import DepositToast from "../components/Deposit-toast";
+import WithdrawToast from "../components/Withdraw-toast";
 export default {
   components: {
     Notice,
     Footer,
+    DepositToast,
+    WithdrawToast
   },
   data() {
     return {
@@ -153,6 +152,8 @@ export default {
           apy: "2033.12",
         },
       ],
+      depositToastShow:false,
+      withdrawToastShow:false
     };
   },
 };

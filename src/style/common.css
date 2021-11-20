@@ -108,3 +108,34 @@
  cursor: pointer;
 }
   /* end */
+/* 弹窗 */
+.toast-mask{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.toast-bg{
+  background-color: #000;
+  width: 490px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 20px;
+
+}
+.toast-close-img{
+  width: 28px;
+  height: 28px;
+}
+.toast-close-img:hover{
+ cursor: pointer;
+}

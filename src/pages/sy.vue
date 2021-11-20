@@ -58,7 +58,7 @@
               </div>
               <div class="list-item-right row">
                 <p>{{ item.num }}<span class="f14">%</span></p>
-                <div class="list-item-btn purple-text f20">Deposit</div>
+                <div class="list-item-btn purple-text f20" @click="depositToastShow=true">Deposit</div>
               </div>
             </li>
           </ul>
@@ -92,16 +92,20 @@
       </div>
     </div>
     <Footer></Footer>
+    <!-- 弹窗 -->
+    <DepositToast @closeDepositToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
   </div>
 </template>
 
 <script>
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
+import DepositToast from "../components/Deposit-toast";
 export default {
   components: {
     Notice,
     Footer,
+    DepositToast
   },
   data() {
     return {
@@ -121,6 +125,7 @@ export default {
           num: 563.32,
         },
       ],
+      depositToastShow:false
     };
   },
 };
