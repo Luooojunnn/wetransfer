@@ -1,37 +1,40 @@
 .f14{
-    font-size: 14px;
+  font-size: 14px;
 }
 .f20{
-    font-size: 20px;
+  font-size: 20px;
 }
 .purple-text {
-    color: #9439ff;
+  color: #9439ff;
+}
+.gray-text{
+  color: #A4A4A4;
 }
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   }
 .page {
-    background: #000;
-    color: #fff;
-  }
-  .notic {
-    width: 84%;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 auto 46px;
-    font-size: 24px;
-    justify-content: center;
-    background: url("../assets/bg.png") center center no-repeat;
-    background-size: cover;
-    font-family: Barlow Condensed;
-  }
-  .notice-img {
-    width: 23px;
-    height: 27px;
-    margin-right: 42px;
-  }
+  background: #000;
+  color: #fff;
+}
+.notic {
+  width: 84%;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 46px;
+  font-size: 24px;
+  justify-content: center;
+  background: url("../assets/bg.png") center center no-repeat;
+  background-size: cover;
+  font-family: Barlow Condensed;
+}
+.notice-img {
+  width: 23px;
+  height: 27px;
+  margin-right: 42px;
+}
 /* 彩色表格 */
 .farm-table {
   width: 100%;
@@ -139,3 +142,49 @@
 .toast-close-img:hover{
  cursor: pointer;
 }
+.deposit-toast-btn {
+  width: 450px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 20;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #9439ff;
+  border-radius: 16px;
+  font-size: 24px;
+}
+.deposit-toast-btn:hover {
+  cursor: pointer;
+}
+.toast-range-box{
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+.toast-range-ipt{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+ /*拖动块的样式*/  
+input[type=range]{ 
+  outline: none; 
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  width:100% !important;  
+  background: #fff;  /*背景颜色，俩个颜色分别对应上下，自己尝试下就知道了嗯*/
+  height: 4px;/*横条的高度，细的真的比较好看嗯*/  
+} 
+ input[type=range]::-webkit-slider-thumb {  
+  -webkit-appearance: none;/*清除系统默认样式*/  
+  height:20px;/*拖动块高度*/  
+  width: 20px;/*拖动块宽度*/  
+  background: #592CBD;/*拖动块背景*/ 
+  border-radius: 50%; /*外观设置为圆形*/  
+}
+/*  */
+.toast-range-box span{
+  position: absolute;
+  top: 16px;
+}
+

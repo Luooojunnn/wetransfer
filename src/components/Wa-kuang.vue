@@ -205,21 +205,7 @@ height: 22px; */
   line-height: 41px;
   text-align: center;
 }
-.btc-and-usd {
-  flex: 1;
-  height: 41px;
-  background: rgba(148, 57, 255, 0.1);
-  border: 1px solid #9439ff;
-  border-radius: 16px;
+.wakuang-Optimum-item > div:hover{
+  cursor: pointer;
 }
-.wakuang-Debt-Risk{
-  font-size: 18px;
-    font-family: Barlow Condensed;
-    font-weight: 500;
-    color: #FFFFFF;
-}
-.wakuang-Optimum-wrap-between{
-  justify-content: space-between;
-}
-
 </style>

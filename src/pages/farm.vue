@@ -54,8 +54,8 @@
               <p class="f14">%</p>
             </td>
             <td class="row" style="justify-content: flex-end">
-              <div class="table-btn">Add</div>
-              <div class="table-btn">Redeem</div>
+              <div class="table-btn" @click="addToastShow=true">Add</div>
+              <div class="table-btn" @click="redeemToastShow=true">Redeem</div>
             </td>
           </tr>
         </table>
@@ -120,16 +120,23 @@
       </div>
     </div>
     <Footer></Footer>
+    <!-- 弹窗 -->
+    <RedeemToast @closeRedeemToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
+    <AddToast @closeAddToast="addToastShow=false" v-if="addToastShow"></AddToast>
   </div>
 </template>
 
 <script>
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
+import RedeemToast from "../components/Redeem-toast";
+import AddToast from "../components/Add-toast";
 export default {
   components: {
     Notice,
     Footer,
+    RedeemToast,
+    AddToast
   },
   data() {
     return {
@@ -163,6 +170,8 @@ export default {
           apy: "2033.12%",
         },
       ],
+      redeemToastShow:false,
+      addToastShow:false
     };
   },
 };
