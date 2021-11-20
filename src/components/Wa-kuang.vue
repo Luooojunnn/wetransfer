@@ -181,4 +181,7 @@ height: 22px; */
   line-height: 41px;
   text-align: center;
 }
+.wakuang-Optimum-item > div:hover{
+  cursor: pointer;
+}
 </style>
