@@ -13,11 +13,7 @@
       </div>
       <div class="wakuang-last">BTC</div>
     </div>
-    <el-slider
-      v-model="value1"
-      :step="10"
-      show-stops>
-    </el-slider>
+    <el-slider v-model="value1" :step="10" show-stops> </el-slider>
 
     <div class="farm-table-item row wakuang-change-ipt-wrap">
       <div style="width: 5%">
@@ -28,12 +24,28 @@
       </div>
       <div class="wakuang-last">BTC</div>
     </div>
-     <el-slider
-      v-model="value2"
-      :step="10"
-      show-stops>
-    </el-slider>
+    <el-slider v-model="value2" :step="10" show-stops> </el-slider>
 
+    <div class="wakuang-Leverage-wrap">
+      <span class="wakuang-Leverage"> Leverage </span>
+      <div class="wakuang-Leverage-slider">
+        <el-slider v-model="value1" :step="10" show-stops> </el-slider>
+      </div>
+    </div>
+
+    <div class="wakuang-available-tips">
+      <span>Remaining BTC/BUSD available:</span>
+      <span>100.00231568 BTC</span>
+    </div>
+
+    <div class="wakuang-Optimum-wrap">
+      <span class="wakuang-Optimum">Borrow</span>
+      <div class="wakuang-Optimum-item">
+        <div>Optimum</div>
+        <div>BTC</div>
+        <div>BUSD</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -42,8 +54,8 @@ export default {
   data() {
     return {
       title: "BTC/BUSD",
-       value1: 0,
-       value2: 0
+      value1: 0,
+      value2: 0,
     };
   },
 };
@@ -117,5 +129,56 @@ height: 22px; */
   border: none;
   background: none;
   color: #fff;
+}
+.wakuang-Leverage-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wakuang-Leverage {
+  background: #000000;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+.wakuang-Leverage-slider {
+  width: 318px;
+  display: inline-block;
+}
+.wakuang-available-tips {
+  display: flex;
+  justify-content: space-between;
+}
+.wakuang-available-tips > span {
+  font-size: 16px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+.wakuang-Optimum-wrap {
+  display: flex;
+}
+.wakuang-Optimum {
+  font-size: 18px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
+}
+.wakuang-Optimum-item {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+.wakuang-Optimum-item > div {
+  font-size: 18px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(148, 57, 255, 0.1);
+  border: 1px solid #9439ff;
+  border-radius: 16px;
+  width: 91px;
+  height: 41px;
+  line-height: 41px;
+  text-align: center;
 }
 </style>

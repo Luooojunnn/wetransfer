@@ -3,7 +3,7 @@
     <div id="Wallet-toast">
       <div class="Wallet-toast-title">
         <span class="Wallet-toast-title-desc">{{ title }}</span>
-        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" @click="close" />
+        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" @click="changeLoginToast" />
       </div>
       <div class="Wallet-toast-detail-wrap">
         <div class="Wallet-toast-detail-wrap-item">
@@ -39,6 +39,8 @@
 
 <script>
 import {getSigner} from '../utils/index'
+import { mapMutations } from "vuex";
+
 export default {
   props:{
     // isLogin: Boolean
@@ -50,14 +52,13 @@ export default {
     };
   },
   mounted() {
-    // this.getLogin();
-    // this.showLoginMetaMask();
+  
   },
   methods: {
+    ...mapMutations({
+      changeLoginToast: 'changeGlobalMask' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
     
-    close() {
-      this.$emit("change-login-toast");
-    },
     async showLoginMetaMask() {
       const res = await getSigner(this);
       if(res) {

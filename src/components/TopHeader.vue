@@ -15,12 +15,14 @@
         English
       </div>
       <div class="Swap-menus">Swap</div>
-      <div class="Wallet-menus" @click="showLoginToMetaMask">Wallet</div>
+      <div class="Wallet-menus" @click="changeLoginToast">Wallet</div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "TopHeader",
   data() {
@@ -30,24 +32,12 @@ export default {
     };
   },
   methods: {
+    ...mapMutations({
+      changeLoginToast: 'changeGlobalMask' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
     goto(l) {
       this.curAc = l;
       this.$router.push({ path: l, query: {} });
-    },
-    
-    
-    async showLoginToMetaMask() {
-      this.$emit('change-login-toast')
-
-      //       const provider = new this.$ethers.providers.Web3Provider(window.ethereum)
-      // //Metamask插件支持签名交易和信息，来发送交易信息改变区块链的状态
-      // //因此需要一个账户联名
-      // const signer = provider.getSigner()
-      // console.log(signer)
-      // console.log(this.$ethers)
-      // let provider = this.$ethers.getDefaultProvider('ropsten');
-      // console.log(provider)
-      // let provider = new this.$ethers.providers.Web3Provider(web3.currentProvider);
     },
   },
   components: {

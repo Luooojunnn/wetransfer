@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <TopHeader @change-login-toast='changeLoginToast'/>
+    <TopHeader />
     <router-view></router-view>
     <div class="global-big-wrap" v-if="loginIng">
-      <WalletToast @change-login-toast='changeLoginToast'></WalletToast>
+      <WalletToast @change-login-toast="changeLoginToast"></WalletToast>
     </div>
   </div>
 </template>
@@ -11,18 +11,27 @@
 <script>
 import TopHeader from "./components/TopHeader.vue";
 import WalletToast from "./components/Wallet-toast.vue";
+import { mapState,mapMutations } from "vuex";
 
 export default {
   name: "App",
-  data(){
+  data() {
     return {
-      loginIng: false
-    }
+    };
   },
-  methods:{
-    changeLoginToast(){
-      this.loginIng = !this.loginIng
-    }
+  computed: {
+    // 使用对象展开运算符将此对象混入到外部对象中
+    ...mapState({
+      loginIng: state => state.globalMmask.loginIng,
+    }),
+  },
+  mounted(){
+    console.log(this.loginIng)
+  },
+  methods: {
+    ...mapMutations({
+      changeLoginToast: 'changeGlobalMask' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    })
   },
   components: {
     TopHeader,
