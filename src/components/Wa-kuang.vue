@@ -46,6 +46,30 @@
         <div>BUSD</div>
       </div>
     </div>
+
+    <div class="wakuang-Optimum-wrap">
+      <span class="wakuang-Optimum">Converted into</span>
+      <div class="btc-and-usd">0 BTC + 0BUSD</div>
+    </div>
+
+    <div class="wakuang-Optimum-wrap wakuang-Optimum-wrap-between">
+      <div class="wakuang-Debt-Risk">Debt Risk Value</div>
+      <div class="wakuang-Debt-Risk-detail">
+        <div class="wakuang-Debt-Risk-num">
+          0.15 BUSD
+        </div>
+        <div class="wakuang-Debt-Risk-num-detail">
+          <span>
+            <el-progress :text-inside="true" :stroke-width="26" :percentage="70"></el-progress>
+          </span>
+          <span>56.52%</span>
+          <span>
+        <img src="../assets/gantanhao.png" alt="" class="wakuang-list-icon" />
+
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -157,7 +181,7 @@ height: 22px; */
 .wakuang-Optimum-wrap {
   display: flex;
 }
-.wakuang-Optimum {
+.wakuang-Optimum,.wakuang-Debt-Risk-num {
   font-size: 18px;
   font-family: Barlow Condensed;
   font-weight: 500;
@@ -181,4 +205,21 @@ height: 22px; */
   line-height: 41px;
   text-align: center;
 }
+.btc-and-usd {
+  flex: 1;
+  height: 41px;
+  background: rgba(148, 57, 255, 0.1);
+  border: 1px solid #9439ff;
+  border-radius: 16px;
+}
+.wakuang-Debt-Risk{
+  font-size: 18px;
+    font-family: Barlow Condensed;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.wakuang-Optimum-wrap-between{
+  justify-content: space-between;
+}
+
 </style>
