@@ -7,7 +7,12 @@
         <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
-      <div class="row flex-sp"></div>
+      <div class="row flex-sp">
+          <div class="row">
+              <img src="../../assets/btc.png" alt="" class="mobile-btc-img" />
+              <span >BCT bitcoin</span>
+          </div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,5 +42,8 @@ export default {
 .mobile-position-img {
   width: 16px;
   margin-right: 10px;
+}
+.mobile-btc-img{
+    width: 20px;
 }
 </style>

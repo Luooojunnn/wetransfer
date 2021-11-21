@@ -104,7 +104,30 @@ export default {
   },
 };
 </script>
-
+<style scoped>
+.toast-bg {
+  height: 90%;
+  padding-top: 54px;
+  font-size: 18px;
+  overflow-y: scroll;
+  padding-bottom: 38px;
+}
+.toast-bg::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+.toast-bg::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  background: #602c9b;
+}
+.toast-bg::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 0;
+  background: #000;
+}
+</style>
 <style>
 #Wa-kuang-wrap {
   /* width: 490px;
@@ -120,28 +143,7 @@ export default {
   border-radius: 20px;
   margin: 119px auto; */
 }
-.toast-bg::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
-  height: 4px;
-}
-.toast-bg::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  border-radius: 5px;
-  background: #602c9b;
-}
-.toast-bg::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  border-radius: 0;
-  background: #fff;
-}
-.toast-bg {
-  height: 90%;
-  padding-top: 54px;
-  font-size: 18px;
-  overflow-y: scroll;
-  padding-bottom: 38px;
-}
+
 .Wa-kuang-toast-title {
   display: flex;
   justify-content: space-between;
