@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TopHeader />
+    <!-- <TopHeader /> -->
     <router-view></router-view>
     <div class="global-big-wrap" v-if="loginIng">
       <WalletToast @change-login-toast="changeLoginToast"></WalletToast>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import TopHeader from "./components/TopHeader.vue";
+// import TopHeader from "./components/TopHeader.vue";
 import WalletToast from "./components/Wallet-toast.vue";
 import { mapState,mapMutations } from "vuex";
 
@@ -34,7 +34,7 @@ export default {
     })
   },
   components: {
-    TopHeader,
+    // TopHeader,
     WalletToast,
   },
 };

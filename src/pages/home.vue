@@ -1,113 +1,296 @@
 <template>
-  <div class="Home-wrap">
-    <Notice></Notice>
-    <div class="Home-wrap-tit-wrap">
-      <span class="Home-wrap-tit"> New Era for Lend & Leverage Yield Farm </span>
-    </div>
-    <div class="Home-tit-detail-wrap">
-      <p class="Home-tit-detail">Skyrocket your payoff by maxmizing your investing utilization rate</p>
-    </div>
-    <div class="Home-wrap-num-detail">
-      <div class="Home-wrap-num-detail-item">
-        <div class="num-detail-item">
-          <span>$</span>
-          <span>2,748,234,980</span>
-        </div>
-        <div class="num-detail-item-bottom-desc">Total value locked</div>
+  <div class="page">
+    <TopHeader  page="Home"/>
+    <div class="main">
+      <!-- <div class="notic row">
+        <img src="../assets/bct.png" alt="" class="notice-img" />
+        <p>Notice：Important message notification window</p>
+      </div> -->
+      <Notice></Notice>
+      <div class="home-title-box">
+        <p class="home-title">New Era for</p>
+        <p class="home-title">Lend & Leverage Yield Farm</p>
       </div>
-      <div class="Home-wrap-num-detail-item">
-        <div class="num-detail-item">
-          <span>$</span>
-          <span>1122</span>
-          <span class="num-icon">DMC</span>
+
+      <div class="home-title-text">
+        Skyrocket your payoff by maxmizing your investing utilization rate
+      </div>
+      <div class="home-number row">
+        <div class="number-left">
+          <p class="left-top text-color-shadow">
+            <span class="f20">$</span>2,748,234,980
+          </p>
+          <p class="f20 text-color">Total value locked</p>
         </div>
-        <div class="num-detail-item">
-          <span>$</span>
-          <span>1122</span>
-          <span class="num-icon">DMC</span>
+        <div class="number-right">
+          <div class="right-item row">
+            <p class="right-number text-color-shadow">
+              <span class="f20">$</span>2,74
+            </p>
+            <p class="text-color right-text">DEMA</p>
+          </div>
+          <div class="right-item row">
+            <p class="right-number text-color-shadow">
+              <span class="f20">$</span>23,345,235
+            </p>
+            <p class="text-color right-text">User's daily revenue</p>
+          </div>
+        </div>
+      </div>
+      <div class="lend-farm-list row">
+        <div class="list-box">
+          <div class="list-title row">
+            <p class="text-color list-title-left">Lend</p>
+            <p class="more purple-text">More></p>
+          </div>
+          <ul>
+            <li class="row" v-for="(item, index) in lendList" :key="index">
+              <span class="list-icon">{{ index + 1 }}</span>
+              <div class="list-item-left row">
+                <img
+                  src="../assets/list-icon.png"
+                  alt=""
+                  class="list-icon-img"
+                />
+                <div class="list-item-text">
+                  <p>BCT</p>
+                  <p class="f14">Bitcoin</p>
+                </div>
+              </div>
+              <div class="list-item-right row">
+                <p>{{ item.num }}<span class="f14">%</span></p>
+                <div class="list-item-btn purple-text f20" @click="depositToastShow=true">Deposit</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="list-box farm-box">
+          <div class="list-title row">
+            <p class="text-color list-title-left">Farm</p>
+            <p class="more purple-text">More></p>
+          </div>
+          <ul>
+            <li class="row" v-for="(item, index) in farmList" :key="index">
+              <span class="list-icon">{{ index + 1 }}</span>
+              <div class="list-item-left row">
+                <img
+                  src="../assets/list-icon.png"
+                  alt=""
+                  class="list-icon-img"
+                />
+                <div class="list-item-text">
+                  <p>BCT</p>
+                  <p class="f14">Bitcoin</p>
+                </div>
+              </div>
+              <div class="list-item-right row">
+                <p>{{ item.num }}<span class="f14">%</span></p>
+                <div class="list-item-btn purple-text f20">3x Farm</div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+    <Footer></Footer>
+    <!-- 弹窗 -->
+    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
   </div>
 </template>
 
 <script>
 import Notice from "../components/Notice";
+import Footer from "../components/Footer";
+import DepositToast from "../components/Deposit-toast";
+import TopHeader from "../components/TopHeader.vue";
 export default {
-  data() {
-    return {};
-  },
   components: {
+    TopHeader,
     Notice,
+    Footer,
+    DepositToast
+  },
+  data() {
+    return {
+      lendList: [
+        {
+          num: 563.32,
+        },
+        {
+          num: 563.32,
+        },
+      ],
+      farmList: [
+        {
+          num: 563.32,
+        },
+        {
+          num: 563.32,
+        },
+      ],
+      depositToastShow:false
+    };
   },
 };
 </script>
-<style scoped>
-.Home-wrap-tit-wrap {
-  margin-top: 23px;
-}
-.Home-wrap-tit {
-  display: block;
-  width: 603px;
-  height: 128px;
+<style>
+.main {
+  width: 1072px;
   margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+.home-title-box {
+  margin-bottom: 44px;
+  margin-top: 22px;
+}
+.home-title {
+  line-height: 82px;
+  text-align: center;
   font-size: 60px;
+  background: linear-gradient(90deg, #a4e1c2 26%, #9439ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.home-number {
+  width: 906px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.home-title-text {
+  text-align: center;
+  margin-bottom: 52px;
   font-family: Barlow Condensed;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(125deg, #a4e1c2 0.5126953125%, #9439ff 100%);
+}
+.number-left {
+  text-align: center;
+  font-family: Barlow Condensed;
+}
+.left-top {
+  font-size: 38px;
+  line-height: 32px;
+  font-weight: bold;
+}
+.text-color-shadow {
+  text-shadow: 3px 2px 8px #c797ff;
+}
+.text-color {
+  background: linear-gradient(90deg, #a4e1c2 0%, #9439ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.Home-tit-detail {
-  text-align: center;
-  font-size: 30px;
-  font-family: Barlow Condensed;
-  font-weight: 500;
-  color: #ffffff;
+.right-item {
+  margin-bottom: 22px;
 }
-.Home-wrap-num-detail {
-  display: flex;
-  justify-content: space-around;
-}
-.Home-wrap-num-detail-item {
-  margin: 59px;
-  text-align: center;
-  background: rebeccapurple;
-  width: 500px;
-  height: 200px;
-}
-.num-detail-item {
-  width: 412px;
-  height: 55px;
-  font-size: 36px;
-  font-family: Barlow Condensed;
-  font-weight: 800;
-  color: #ffffff;
-  width: 100%;
-}
-.num-detail-item-bottom-desc {
-  /* width: 232px;
-height: 23px; */
+.right-number {
   font-size: 32px;
-  font-family: Barlow Condensed;
-  font-weight: 500;
-  color: #ffffff;
-  opacity: 0.8;
-  background: linear-gradient(0deg, #a4e1c2 0.5126953125%, #9439ff 100%);
+  margin-right: 31px;
+  width: 230px;
+  text-align: right;
+}
+.right-text {
+  width: 101px;
+  font-size: 16px;
+  text-align: left;
+}
+.lend-farm-list {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+.list-box {
+  width: 520px;
+}
+.list-title {
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+.list-title-left {
+  width: 140px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 48px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.num-icon{
-    width: 33px;
-height: 17px;
-font-size: 22px;
-font-family: Barlow Condensed;
-font-weight: 500;
-color: #FFFFFF;
-opacity: 0.8;
-background: linear-gradient(125deg, #A4E1C2 0.5126953125%, #9439FF 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.more {
+  font-size: 20px;
+  text-decoration: underline;
+}
+.more:hover {
+  cursor: pointer;
+}
+.lend-farm-list li {
+  position: relative;
+  background: #000;
+  border: 1px transparent solid;
+  height: 60px;
+  border-radius: 20px;
+  padding: 0 10px 0 58px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.lend-farm-list li:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(157deg, #a4e1c2, #9439ff);
+  border-radius: 20px;
+  content: "";
+  z-index: -1;
+}
+.list-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(135deg, #a4e1c2 1%, #9439ff 100%);
+  border-radius: 20px 0px 20px 0px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+.list-icon-img {
+  width: 34px;
+  height: 34px;
+  margin-right: 16px;
+}
+
+.list-item-text {
+  font-size: 24px;
+}
+.list-item-right {
+  font-size: 28px;
+}
+.list-item-btn {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: rgba(148, 57, 255, 0.1);
+  border: 1px solid #9439ff;
+  margin-left: 16px;
+  border-radius: 16px;
+}
+.farm-box .list-title-left {
+  background: linear-gradient(125deg, #80b6ff 0.5126953125%, #e539ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.farm-box li:after {
+  background: linear-gradient(157deg, #80b6ff, #e539ff);
+}
+.farm-box .list-icon {
+  background: linear-gradient(135deg, #80b6ff 1%, #e539ff 100%);
+  color: #391068;
 }
 </style>

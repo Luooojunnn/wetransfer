@@ -13,20 +13,23 @@
       <!-- 滑块 -->
       <range @getRangeNum="getRangeNum" sliderText="BTC"></range>
       <!--  -->
-  
+
       <div class="row line-text flex-sp">
         <p>Debts</p>
-        <p style="text-decoration: line-through">0.003 BTC </p>
+        <p style="text-decoration: line-through">0.003 BTC</p>
       </div>
       <div class="row line-text flex-sp">
         <p>Updated Debts</p>
-        <p>0.001BTC </p>
+        <p>0.001BTC</p>
       </div>
       <div class="row line-text flex-sp">
-        <p>Updated Risk Value </p>
+        <p>Updated Risk Value</p>
         <div class="row add-risk">
           <p style="text-decoration: line-through">70.52%</p>
           <p>→</p>
+          <div class="add-risk-progress">
+            <div class="add-risk-progress-bar"></div>
+          </div>
           <p>58.52%</p>
         </div>
       </div>
@@ -67,10 +70,25 @@ export default {
 .close-box p {
   font-size: 30px;
 }
-.line-text{
-    margin-bottom: 22px;
+.line-text {
+  margin-bottom: 22px;
 }
 .add-risk p {
   margin-left: 6px;
+}
+.add-risk-progress {
+  width: 50px;
+  height: 22px;
+  background: #fff;
+  border-radius: 18%;
+  margin-left: 6px;
+  padding: 2px 1px;
+  box-sizing: border-box;
+}
+.add-risk-progress-bar {
+  width: 50%;
+  height: 100%;
+  background: #00ff00;
+  border-radius: 18%;
 }
 </style>

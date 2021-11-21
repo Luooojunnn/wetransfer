@@ -31,6 +31,9 @@
         <div class="row add-risk">
           <p style="text-decoration: line-through">70.52%</p>
           <p>→</p>
+          <div class="add-risk-progress">
+            <div class="add-risk-progress-bar"></div>
+          </div>
           <p>58.52%</p>
         </div>
       </div>
@@ -94,5 +97,20 @@ export default {
 }
 .add-risk p {
   margin-left: 6px;
+}
+.add-risk-progress {
+  width: 50px;
+  height: 22px;
+  background: #fff;
+  border-radius: 18%;
+  margin-left: 6px;
+  padding: 2px 1px;
+  box-sizing: border-box;
+}
+.add-risk-progress-bar {
+  width: 50%;
+  height: 100%;
+  background: #00ff00;
+  border-radius: 18%;
 }
 </style>

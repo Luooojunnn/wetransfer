@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <TopHeader page="Farm"/>
     <div class="main">
       <Notice></Notice>
       <div class="page-big-tit">
@@ -135,8 +136,10 @@ import RedeemToast from "../components/Redeem-toast";
 import AddToast from "../components/Add-toast";
 import CalcToast from "../components/Calc-toast";
 import RepayToast from "../components/Repay-toast";
+import TopHeader from "../components/TopHeader.vue";
 export default {
   components: {
+    TopHeader,
     Notice,
     Footer,
     RedeemToast,
