@@ -73,7 +73,7 @@ export default {
   mounted() {},
   methods: {
     closeToast() {
-      this.$emit("closeRedeemToast");
+      this.$emit("closeToast");
     },
   },
 };

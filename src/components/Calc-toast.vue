@@ -64,14 +64,7 @@ export default {
   },
   methods: {
     closeToast() {
-      this.$emit("closeCalcToast");
-    },
-    // 获取滑块数据
-    getRangeNum(num) {
-      console.log(num);
-    },
-    getRangeNum2(num) {
-      console.log(num);
+      this.$emit("closeToast");
     },
   },
 };
@@ -94,7 +87,7 @@ export default {
 .calc-toast-asset {
   margin-bottom: 12px;
   margin-top: 26px;
-  font-size: 24px;
+  font-size: 30px;
 }
 .calc-asset-ipt-box {
   position: relative;
@@ -120,10 +113,10 @@ export default {
   position: absolute;
   left: 30px;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -10px;
 }
 .calc-toast-loss {
-  margin-top: 38px;
+  margin-top: 26px;
   margin-bottom: 10px;
 }
 .calc-toast-laverage {

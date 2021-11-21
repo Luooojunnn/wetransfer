@@ -107,8 +107,8 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast @closeDepositToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
-    <WithdrawToast @closeWithdrawToast="withdrawToastShow=false" v-if="withdrawToastShow"></WithdrawToast>
+    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
+    <WithdrawToast @closeToast="withdrawToastShow=false" v-if="withdrawToastShow"></WithdrawToast>
 
   </div>
 </template>

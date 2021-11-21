@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     closeToast() {
-      this.$emit("closeWithdrawToast");
+      this.$emit("closeToast");
     },
   },
 };

@@ -93,7 +93,7 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast @closeDepositToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
+    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
   </div>
 </template>
 

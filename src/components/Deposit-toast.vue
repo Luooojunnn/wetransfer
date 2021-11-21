@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     closeToast() {
-      this.$emit("closeDepositToast");
+      this.$emit("closeToast");
     },
   },
 };

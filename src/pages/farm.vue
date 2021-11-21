@@ -121,9 +121,10 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <RedeemToast @closeRedeemToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
-    <AddToast @closeAddToast="addToastShow=false" v-if="addToastShow"></AddToast>
-    <CalcToast @closeCalcToast="calcToastShow=false" v-if="calcToastShow"></CalcToast>
+    <RedeemToast @closeToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
+    <AddToast @closeToast="addToastShow=false" v-if="addToastShow"></AddToast>
+    <CalcToast @closeToast="calcToastShow=false" v-if="calcToastShow"></CalcToast>
+    <RepayToast @closeToast="repayToastShow=false" v-if="repayToastShow"></RepayToast>
   </div>
 </template>
 
@@ -133,13 +134,15 @@ import Footer from "../components/Footer";
 import RedeemToast from "../components/Redeem-toast";
 import AddToast from "../components/Add-toast";
 import CalcToast from "../components/Calc-toast";
+import RepayToast from "../components/Repay-toast";
 export default {
   components: {
     Notice,
     Footer,
     RedeemToast,
     AddToast,
-    CalcToast
+    CalcToast,
+    RepayToast
   },
   data() {
     return {
@@ -175,7 +178,8 @@ export default {
       ],
       redeemToastShow:false,
       addToastShow:false,
-      calcToastShow:false
+      calcToastShow:false,
+      repayToastShow:true
     };
   },
 };
