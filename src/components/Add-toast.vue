@@ -11,10 +11,8 @@
         />
       </div>
       <!-- 滑块 -->
-      <div class="add-toast-main">
-        <range @getRangeNum="getRangeNum" sliderText="BTC"></range>
-        <range @getRangeNum="getRangeNum2" sliderText="BUSD"></range>
-      </div>
+      <range @getRangeNum="getRangeNum" sliderText="BTC"></range>
+      <range @getRangeNum="getRangeNum2" sliderText="BUSD"></range>
       <!--  -->
       <div class="row add-converte-box">
         <p>Converted into</p>
@@ -30,6 +28,11 @@
       </div>
       <div class="row line-text">
         <p>Updated Risk Value</p>
+        <div class="row add-risk">
+          <p style="text-decoration: line-through">70.52%</p>
+          <p>→</p>
+          <p>58.52%</p>
+        </div>
       </div>
       <div class="deposit-toast-btn">Confirm</div>
     </div>
@@ -62,17 +65,16 @@ export default {
 .toast-bg {
   height: 650px;
   padding-top: 26px;
+  font-size: 18px;
 }
 .close-box {
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .close-box p {
   font-size: 30px;
 }
-.add-toast-main {
-  font-size: 18px;
-}
+
 .add-converte-box {
   margin-bottom: 30px;
   justify-content: space-between;
@@ -89,5 +91,8 @@ export default {
 .line-text {
   justify-content: space-between;
   margin-bottom: 20px;
+}
+.add-risk p {
+  margin-left: 6px;
 }
 </style>

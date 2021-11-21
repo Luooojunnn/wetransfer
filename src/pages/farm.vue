@@ -81,7 +81,7 @@
           </div>
           <div class="farm-right-bottom">
             <img src="../assets/bct.png" alt="" class="farm-img" />
-            <p>Impermanent Loss Calculator</p>
+            <p @click="calcToastShow=true">Impermanent Loss Calculator</p>
           </div>
         </div>
       </div>
@@ -123,6 +123,7 @@
     <!-- 弹窗 -->
     <RedeemToast @closeRedeemToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
     <AddToast @closeAddToast="addToastShow=false" v-if="addToastShow"></AddToast>
+    <CalcToast @closeCalcToast="calcToastShow=false" v-if="calcToastShow"></CalcToast>
   </div>
 </template>
 
@@ -131,12 +132,14 @@ import Notice from "../components/Notice";
 import Footer from "../components/Footer";
 import RedeemToast from "../components/Redeem-toast";
 import AddToast from "../components/Add-toast";
+import CalcToast from "../components/Calc-toast";
 export default {
   components: {
     Notice,
     Footer,
     RedeemToast,
-    AddToast
+    AddToast,
+    CalcToast
   },
   data() {
     return {
@@ -171,7 +174,8 @@ export default {
         },
       ],
       redeemToastShow:false,
-      addToastShow:false
+      addToastShow:false,
+      calcToastShow:false
     };
   },
 };
