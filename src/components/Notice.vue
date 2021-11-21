@@ -2,7 +2,9 @@
   <div id="Notice-wrap">
     <div class="out-kuang">
       <img src="../assets/bct.png" alt="" class="notice-img" />
-      <span class="notice-desc">Notice: Important message notification window </span>
+      <span class="notice-desc"
+        >Notice: Important message notification window
+      </span>
     </div>
   </div>
 </template>
@@ -36,6 +38,7 @@ export default {
   width: 23px;
   height: 27px;
   background: linear-gradient(125deg, #80b6ff, #e539ff);
+  margin-right: 42px;
 }
 .notice-desc {
   width: 528px;

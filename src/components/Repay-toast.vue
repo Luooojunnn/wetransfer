@@ -28,7 +28,11 @@
           <p style="text-decoration: line-through">70.52%</p>
           <p>→</p>
           <div class="add-risk-progress">
-            <div class="add-risk-progress-bar"></div>
+            <el-progress
+              :text-inside="true"
+              :stroke-width="22"
+              :percentage="70"
+            ></el-progress>
           </div>
           <p>58.52%</p>
         </div>
@@ -77,18 +81,15 @@ export default {
   margin-left: 6px;
 }
 .add-risk-progress {
-  width: 50px;
-  height: 22px;
-  background: #fff;
-  border-radius: 18%;
   margin-left: 6px;
-  padding: 2px 1px;
-  box-sizing: border-box;
+  width: 50px;
 }
-.add-risk-progress-bar {
-  width: 50%;
-  height: 100%;
-  background: #00ff00;
-  border-radius: 18%;
+</style>
+<style>
+.el-progress-bar__inner {
+  background-color: #00ff00;
+}
+.el-progress {
+  width: 50px;
 }
 </style>

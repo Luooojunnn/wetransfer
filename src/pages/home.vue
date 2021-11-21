@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <TopHeader  page="Home"/>
+    <TopHeader page="Home" />
     <div class="main">
       <!-- <div class="notic row">
         <img src="../assets/bct.png" alt="" class="notice-img" />
@@ -59,7 +59,12 @@
               </div>
               <div class="list-item-right row">
                 <p>{{ item.num }}<span class="f14">%</span></p>
-                <div class="list-item-btn purple-text f20" @click="depositToastShow=true">Deposit</div>
+                <div
+                  class="list-item-btn purple-text f20"
+                  @click="depositToastShow = true"
+                >
+                  Deposit
+                </div>
               </div>
             </li>
           </ul>
@@ -94,7 +99,14 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
+    <DepositToast
+      @closeToast="depositToastShow = false"
+      v-if="depositToastShow"
+    ></DepositToast>
+    <WakuangToast
+      @closeToast="wakuangToastShow = false"
+      v-if="wakuangToastShow"
+    ></WakuangToast>
   </div>
 </template>
 
@@ -103,12 +115,14 @@ import Notice from "../components/Notice";
 import Footer from "../components/Footer";
 import DepositToast from "../components/Deposit-toast";
 import TopHeader from "../components/TopHeader.vue";
+import WakuangToast from "../components/Wa-kuang.vue";
 export default {
   components: {
     TopHeader,
     Notice,
     Footer,
-    DepositToast
+    DepositToast,
+    WakuangToast,
   },
   data() {
     return {
@@ -128,7 +142,8 @@ export default {
           num: 563.32,
         },
       ],
-      depositToastShow:false
+      depositToastShow: false,
+      wakuangToastShow: true,
     };
   },
 };

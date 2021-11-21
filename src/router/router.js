@@ -5,6 +5,7 @@ const routes = [
     { path: '/Farm', component: resolve => require(['../pages/farm'], resolve)},
     { path: '/Lend', component: resolve => require(['../pages/lend'], resolve)},
     { path: '/mobileLend', component: resolve => require(['../pages/mobile/lend'], resolve)},
+    { path: '/mobileIndex', component: resolve => require(['../pages/mobile/index'], resolve)},
 
     { path: '/test', component: resolve => require(['../components/Wa-kuang'], resolve)},
 
