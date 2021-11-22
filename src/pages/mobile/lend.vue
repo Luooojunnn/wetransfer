@@ -3,7 +3,7 @@
     <Notice></Notice>
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
-      <div class="row 14">
+      <div class="row f15 ml8" style="margin-bottom: 6px">
         <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
@@ -13,7 +13,7 @@
       <!-- 总览 -->
       <div class="mobile-overview">
         <div class="row flex-sp">
-          <p class="f18">总览</p>
+          <p class="f20 ml8">总览</p>
           <div class="mobile-overview-ipt-box">
             <input type="text" class="mobile-overview-ipt" />
             <img
@@ -23,7 +23,7 @@
             />
           </div>
         </div>
-        <div class="mobile-overview-tip row flex-sp f14">
+        <div class="mobile-overview-tip row flex-sp f13">
           <div class="row">
             <p>币种资金使用率</p>
             <img
@@ -60,7 +60,6 @@ export default {
   },
   data() {
     return {
-      lendShow: true,
       lendList: [
         {
           balance: 400.25,
@@ -95,22 +94,23 @@ export default {
 .mobile-title {
   text-align: center;
   font-weight: bold;
-  margin-top: 24px;
+  margin-top: 34px;
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 16px 60px;
+  padding: 0 18px 200px;
 }
 .mobile-position-img {
   width: 16px;
   margin-right: 10px;
 }
+.mobile-overview {
+  margin-top: 58px;
+}
 .mobile-overview-ipt-box {
   position: relative;
-  width: 200px;
+  width: 207px;
   height: 30px;
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
 .mobile-overview-ipt {
   width: 100%;
@@ -135,12 +135,14 @@ export default {
 }
 .mobile-overview-tip {
   border: 1px dashed #fff;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
+  width: 95%;
+  margin: 0 auto;
+  height: 26px;
+  line-height: 26px;
   padding: 0 10px 0 20px;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  margin-top: 24px;
 }
 .mobile-overview-tip-img {
   width: 8px;

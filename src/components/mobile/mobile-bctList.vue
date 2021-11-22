@@ -1,9 +1,9 @@
 <template>
   <div class="mobile-list-main">
-    <div class="mobile-bct-item">
+    <div class="mobile-bct-item fw">
       <div class="row flex-sp">
         <div class="row">
-          <div class="mobile-item-img-box f18">
+          <div class="mobile-item-img-box f23">
             <img
               v-if="list.type == '1'"
               src="../../assets/btc.png"
@@ -17,17 +17,17 @@
               class="mobile-bct-img"
             />
           </div>
-          <p v-if="list.type == '1'" class="fw">BCT bitcoin</p>
-          <p v-if="list.type == '2'" class="fw">BCT/USDT</p>
+          <p v-if="list.type == '1'">BCT bitcoin</p>
+          <p v-if="list.type == '2'">BCT/USDT</p>
         </div>
 
         <div class="row">
-          <p>{{ list.num1 }}</p>
+          <p class="f18">{{ list.num1 }}</p>
 
           <img src="../../assets/tip.png" alt="" class="mobile-tip-img" />
         </div>
       </div>
-      <div class="row flex-sp mt10">
+      <div class="row flex-sp f18 mt10">
         <p>{{ list.num2 }}</p>
         <p>{{ list.num3 }}</p>
       </div>
@@ -44,7 +44,7 @@ export default {
 </script>
 <style scoped>
 .mobile-list-main {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .mobile-bct-item {
   background: #26143a;
@@ -54,11 +54,10 @@ export default {
   padding: 12px 12px 15px;
 }
 .mobile-bitcoin-img {
-  width: 30px;
-  height: 30px;
+  width: 24px;
 }
 .mobile-bct-img {
-  width: 38px;
+  width: 37px;
 }
 .mobile-item-img-box {
   width: 40px;
@@ -66,9 +65,9 @@ export default {
   white-space: nowrap;
 }
 .mobile-tip-img {
-  width: 14px;
-  height: 14px;
-  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  margin-left: 8px;
 }
 .mt10 {
   margin-top: 10px;

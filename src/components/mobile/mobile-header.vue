@@ -2,10 +2,10 @@
   <div class="mobile-header row flex-sp">
     <div class="row">
       <div class="TopHeader-icon"></div>
-      <div class="deMac purple-text">DeMac</div>
+      <div class="deMac purple-text f15">DeMac</div>
     </div>
     <div class="row">
-      <div class="Wallet-menus purple-text row" @click="changeLoginToast">
+      <div class="Wallet-menus purple-text row f13" @click="changeLoginToast">
         <img src="../../assets/wallet.png" alt="" class="mobile-wallet" />
         Wallet
       </div>
@@ -30,9 +30,9 @@ export default {
   box-sizing: border-box;
 }
 .TopHeader-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
   background-size: cover;
   background-image: url(../../assets/icon.png);
 }
@@ -40,20 +40,20 @@ export default {
   font-weight: bold;
 }
 .Wallet-menus {
-  width: 116px;
-  height: 30px;
+  width: 73px;
+  height: 25px;
   border: 2px solid #8a3de5;
   border-radius: 25px;
-  line-height: 30px;
+  line-height: 25px;
   justify-content: center;
 }
 .mobile-wallet {
-  width: 20px;
-  margin-right: 10px;
+  width: 12px;
+  margin-right: 7px;
 }
 .mobile-menu {
-  width: 30px;
-  height: 30px;
-  margin-left: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 13px;
 }
 </style>

@@ -1,7 +1,16 @@
+.f13{
+  font-size: 13px;
+}
 .f14{
   font-size: 14px;
 }
+.f15{
+  font-size: 16px;
+}
 .f16{
+  font-size: 16px;
+}
+.f17{
   font-size: 16px;
 }
 .f18{
@@ -10,8 +19,17 @@
 .f20{
   font-size: 20px;
 }
+.f23{
+  font-size: 23px;
+}
 .fw{
   font-weight: bold;
+}
+.fn{
+  font-weight: normal;
+}
+.ml8{
+  margin-left: 8px;
 }
 .purple-text {
   color: #9439ff;
