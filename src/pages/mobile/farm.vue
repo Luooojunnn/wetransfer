@@ -161,7 +161,7 @@ export default {
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 18px 65px;
+  padding: 0 18px 200px;
 }
 .mobile-position-img {
   width: 16px;

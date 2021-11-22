@@ -3,7 +3,7 @@
     <Notice></Notice>
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
-      <div class="row f15 ml8" style="margin-bottom:6px">
+      <div class="row f15 ml8" style="margin-bottom: 6px">
         <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
@@ -98,14 +98,14 @@ export default {
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 18px 65px;
+  padding: 0 18px 200px;
 }
 .mobile-position-img {
   width: 16px;
   margin-right: 10px;
 }
-.mobile-overview{
-    margin-top: 58px;
+.mobile-overview {
+  margin-top: 58px;
 }
 .mobile-overview-ipt-box {
   position: relative;
@@ -135,7 +135,8 @@ export default {
 }
 .mobile-overview-tip {
   border: 1px dashed #fff;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   height: 26px;
   line-height: 26px;
   padding: 0 10px 0 20px;
