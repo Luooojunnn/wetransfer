@@ -60,7 +60,6 @@ export default {
   },
   data() {
     return {
-      lendShow: true,
       lendList: [
         {
           balance: 400.25,
