@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mobile-app">
     <Header></Header>
 
     <Lend v-if="lendShow"></Lend>
@@ -21,4 +21,7 @@ export default {
 };
 </script>
 <style scoped>
+.mobile-app{
+    background: #0A0B0B;
+}
 </style>

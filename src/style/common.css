@@ -1,8 +1,17 @@
 .f14{
   font-size: 14px;
 }
+.f16{
+  font-size: 16px;
+}
+.f18{
+  font-size: 18px;
+}
 .f20{
   font-size: 20px;
+}
+.fw{
+  font-weight: bold;
 }
 .purple-text {
   color: #9439ff;
