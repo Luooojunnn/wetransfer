@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import globalMmask from './modules/global-mask'
+import setUserInfo from './modules/user-info'
 
 Vue.use(Vuex)
 
@@ -9,6 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   modules: {
     globalMmask,
+    setUserInfo
   },
   // strict: debug,
 })

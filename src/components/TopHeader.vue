@@ -15,13 +15,18 @@
         English
       </div>
       <div class="Swap-menus">Swap</div>
-      <div class="Wallet-menus" @click="changeLoginToast">Wallet</div>
+
+      <div class="Wallet-menus" @click="changeLoginToastFc" v-if="!userInfo.adr">Wallet</div>
+      <div v-else class="login-info-about-wallet">
+        <div class="login-info-about-wallet-num">{{userInfo.etherString}}</div>
+        <div class="login-info-about-wallet-account">{{userInfo.walletAdressShow}}</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapState,mapMutations } from "vuex";
 
 export default {
   name: "TopHeader",
@@ -32,6 +37,11 @@ export default {
     };
   },
   props: ["page"],
+  computed:{
+    ...mapState({
+     userInfo: state => state.setUserInfo.userInfo,
+  })
+  },
   mounted(){
     this.curAc = this.page
   },
@@ -43,6 +53,11 @@ export default {
       this.curAc = l;
       this.$router.push({ path: l, query: {} });
     },
+    changeLoginToastFc(){
+      this.changeLoginToast({
+        toastType: 1
+      })
+    }
   },
   components: {
     // currentAc: 'Home'
@@ -112,5 +127,16 @@ export default {
   color: #9439ff;
 }
 .yuyan-menus-icon {
+}
+.login-info-about-wallet{
+      padding: 3px 3px 3px 24px;
+    border: 1px solid #641aff;
+    box-sizing: border-box;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+}
+.login-info-about-wallet-account{
+  background: red;
 }
 </style>

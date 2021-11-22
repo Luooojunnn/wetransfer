@@ -3,7 +3,7 @@
     <div id="Wallet-toast">
       <div class="Wallet-toast-title">
         <span class="Wallet-toast-title-desc">{{ title }}</span>
-        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" @click="changeLoginToast" />
+        <img src="../assets/close.png" alt="" class="Wallet-toast-title-notice-img" @click="changeLoginToastFc" />
       </div>
       <div class="Wallet-toast-detail-wrap">
         <div class="Wallet-toast-detail-wrap-item">
@@ -17,10 +17,10 @@
             <p class="Connect-Wallet-tips">Connected MetaMask</p>
             <div class="lanquan-wrap">
               <span class="lanse-quan"></span>
-              <span class="lanse-quan-desc">10x22...88aa</span>
+              <span class="lanse-quan-desc">{{ walletAdressShow }}</span>
             </div>
             <div class="Copy-Address-BSC-wrap">
-              <div class="Copy-wrap">
+              <div class="Copy-wrap" @click="copyData">
                 <img src="../assets/copy.png" alt="" class="copy-img-wallet-toast" />
                 <p class="Copy-Address">Copy Address</p>
               </div>
@@ -38,40 +38,68 @@
 </template>
 
 <script>
-import {getSigner} from '../utils/index'
+import { getSigner } from "../utils/index";
 import { mapMutations } from "vuex";
 
 export default {
-  props:{
+  props: {
     // isLogin: Boolean
   },
   data() {
     return {
       title: "Connect Wallet",
-      isLogin:false
+      isLogin: false,
+      walletAdress: "",
+      walletAdressShow: "", // 展示地址打码
     };
   },
-  mounted() {
-  
-  },
+  mounted() {},
   methods: {
     ...mapMutations({
-      changeLoginToast: 'changeGlobalMask' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+      changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+      setUserInfo: 'setUserInfo'
     }),
-    
+    changeLoginToastFc(){
+      this.changeLoginToast({
+        toastType: -1
+      })
+    },
     async showLoginMetaMask() {
       const res = await getSigner(this);
-      if(res) {
-        this.title = res+"Account";
+      if (res) {
+        this.title = "Account";
         this.isLogin = true;
+        const adr = res.adr;
+        const etherString = res.etherString;
+        
+        this.walletAdress = adr;
+        this.walletAdressShow = adr.slice(0, 4) + "..." + adr.slice(-4);
+        this.setUserInfo({
+          adr,
+          etherString,
+          walletAdressShow: this.walletAdressShow
+        })
         // this.$emit("change-isLogin-status", res);
-
       }
       // const provider = new this.$ethers.providers.Web3Provider(window.ethereum, "any");
       // // Prompt user for account connections
       // await provider.send("eth_requestAccounts", []);
       // const signer = provider.getSigner();
       // console.log("Account:", await signer.getAddress());
+    },
+    copyData() {
+      //如果需要回调：
+      this.$copyText(this.walletAdress).then(
+        () => {
+          this.$message({
+            message: "复制成功",
+            type: "success",
+          });
+        },
+        function () {
+          this.$message.error("复制失败");
+        }
+      );
     },
   },
 };

@@ -8,6 +8,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex'
 import store from './store'
+import VueClipboard from 'vue-clipboard2'
 
 const ethers = require('ethers');
 
@@ -16,6 +17,7 @@ Vue.prototype.$ethers = ethers;
 
 Vue.use(ElementUI);
 Vue.use(Vuex);
+Vue.use(VueClipboard)
 
 const router = new VueRouter({
   routes

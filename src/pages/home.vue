@@ -61,7 +61,7 @@
                 <p>{{ item.num }}<span class="f14">%</span></p>
                 <div
                   class="list-item-btn purple-text f20"
-                  @click="depositToastShow = true"
+                  @click="changeLoginToastFc"
                 >
                   Deposit
                 </div>
@@ -99,10 +99,10 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast
+    <!-- <DepositToast
       @closeToast="depositToastShow = false"
       v-if="depositToastShow"
-    ></DepositToast>
+    ></DepositToast> -->
     <WakuangToast
       @closeToast="wakuangToastShow = false"
       v-if="wakuangToastShow"
@@ -113,15 +113,18 @@
 <script>
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
-import DepositToast from "../components/Deposit-toast";
+// import DepositToast from "../components/Deposit-toast";
 import TopHeader from "../components/TopHeader.vue";
 import WakuangToast from "../components/Wa-kuang.vue";
+
+import { mapMutations } from "vuex";
+
 export default {
   components: {
     TopHeader,
     Notice,
     Footer,
-    DepositToast,
+    // DepositToast,
     WakuangToast,
   },
   data() {
@@ -146,6 +149,16 @@ export default {
       wakuangToastShow: true,
     };
   },
+  methods:{
+    ...mapMutations({
+      changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
+    changeLoginToastFc(){
+      this.changeLoginToast({
+        toastType: 2
+      })
+    },
+  }
 };
 </script>
 <style>
