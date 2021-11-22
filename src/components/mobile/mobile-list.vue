@@ -49,8 +49,12 @@
           <p v-if="mobilePage == 'farm'"># 12357</p>
         </div>
         <div class="row purple-text fw">
-          <div class="mobile-list-btn">Deposit</div>
-          <div class="mobile-list-btn">Withdraw</div>
+          <div v-if="mobilePage == 'lend'" class="mobile-list-btn">Deposit</div>
+          <div v-if="mobilePage == 'lend'" class="mobile-list-btn">
+            Withdraw
+          </div>
+          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px">补仓</div>
+          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px">赎回</div>
         </div>
       </div>
     </div>
@@ -75,7 +79,7 @@ export default {
   width: 20px;
   margin-right: 10px;
 }
-.mobile-farm-bct-img{
+.mobile-farm-bct-img {
   width: 38px;
   margin-right: 6px;
 }
