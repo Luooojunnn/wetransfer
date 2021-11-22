@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-list-main">
-    <div class="row flex-sp f16 mobile-btc">
+    <div class="row flex-sp f18 mobile-btc">
       <div class="row" v-if="mobilePage == 'lend'">
         <img src="../../assets/btc.png" alt="" class="mobile-btc-img" />
         <span class="fw">BCT bitcoin</span>
@@ -14,7 +14,7 @@
         <div class="mobile-btc-right-btn purple-text fw">claim$10.23</div>
       </div>
     </div>
-    <div class="mobile-list-box f16">
+    <div class="mobile-list-box f16 fw">
       <div class="mobile-list-inner">
         <div v-if="mobilePage == 'farm'" class="row flex-sp">
           <p>Asset</p>
@@ -32,7 +32,7 @@
           <p>APY</p>
           <div class="row">
             <p>{{ list.apy }}</p>
-            <img src="../../assets/tip.png" alt="" class="mobile-tip-img" />
+            <img src="../../assets/tip.png" alt="" class="mobile-list-tip-img" />
           </div>
         </div>
         <div v-if="mobilePage == 'lend'" class="row flex-sp">
@@ -44,9 +44,9 @@
           <p>{{ list.risk }}</p>
         </div>
       </div>
-      <div class="mobile-list-btns row flex-sp">
+      <div class="mobile-list-btns row flex-sp f18">
         <div>
-          <p v-if="mobilePage == 'farm'"># 12357</p>
+          <p v-if="mobilePage == 'farm'" class="fn"># 12357</p>
         </div>
         <div class="row purple-text fw">
           <div v-if="mobilePage == 'lend'" class="mobile-list-btn">Deposit</div>
@@ -70,14 +70,14 @@ export default {
 </script>
 <style scoped>
 .mobile-list-main {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 .mobile-btc {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .mobile-btc-img {
   width: 20px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .mobile-farm-bct-img {
   width: 38px;
@@ -94,19 +94,19 @@ export default {
   margin-top: 10px;
 }
 .mobile-list-box {
-  padding: 20px 10px;
+  padding: 15px 12px;
   background: #170f23;
   border: 1px solid #9439ff;
   opacity: 1;
   border-radius: 9px;
 }
-.mobile-tip-img {
-  width: 14px;
-  height: 14px;
+.mobile-list-tip-img {
+  width: 12px;
+  height: 12px;
   margin-left: 10px;
 }
 .mobile-list-inner > div {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .mobile-list-inner {
   border-bottom: 1px solid #e1e1e1;
@@ -114,10 +114,10 @@ export default {
 }
 
 .mobile-list-btn {
-  width: 110px;
-  height: 36px;
+  width: 100px;
+  height: 33px;
   text-align: center;
-  line-height: 36px;
+  line-height: 33px;
   background: #26143a;
   border: 1px solid #6d2cba;
   opacity: 1;
