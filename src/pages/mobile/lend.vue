@@ -3,7 +3,7 @@
     <Notice></Notice>
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
-      <div class="row f15" style="margin-bottom:6px">
+      <div class="row f15 ml8" style="margin-bottom:6px">
         <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
@@ -13,7 +13,7 @@
       <!-- 总览 -->
       <div class="mobile-overview">
         <div class="row flex-sp">
-          <p class="f20">总览</p>
+          <p class="f20 ml8">总览</p>
           <div class="mobile-overview-ipt-box">
             <input type="text" class="mobile-overview-ipt" />
             <img
@@ -98,7 +98,7 @@ export default {
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 16px 60px;
+  padding: 0 18px 65px;
 }
 .mobile-position-img {
   width: 16px;

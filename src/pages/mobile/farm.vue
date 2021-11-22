@@ -3,7 +3,7 @@
     <Notice></Notice>
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
-      <div class="row f15" style="margin-bottom:6px">
+      <div class="row f15 ml8" style="margin-bottom: 6px">
         <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
@@ -12,7 +12,7 @@
       </div>
       <!-- 总览 -->
       <div class="mobile-overview">
-        <div class="row mobile-baseline">
+        <div class="row mobile-baseline ml8">
           <div
             v-for="(item, index) in titleList"
             :key="index"
@@ -24,7 +24,7 @@
             </p>
           </div>
         </div>
-        <div class="mobile-second-title row mobile-baseline">
+        <div class="mobile-second-title row mobile-baseline ml8">
           <div
             v-for="(item, index) in secondTitleList"
             :key="index"
@@ -161,7 +161,7 @@ export default {
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 16px 60px;
+  padding: 0 18px 65px;
 }
 .mobile-position-img {
   width: 16px;
@@ -170,7 +170,8 @@ export default {
 
 .mobile-overview-tip {
   border: 1px dashed #fff;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   height: 30px;
   line-height: 30px;
   padding: 0 10px 0 20px;
@@ -185,32 +186,33 @@ export default {
 .mr15 {
   margin-right: 15px;
 }
-.mr11{
-    margin-right: 11px;
+.mr11 {
+  margin-right: 11px;
 }
-.mobile-title-unactive p{
-    font-size: 15px;
+.mobile-title-unactive p {
+  font-size: 15px;
 }
-.mobile-second-title-unactive p{
-    font-size: 13px;
+.mobile-second-title-unactive p {
+  font-size: 13px;
 }
 .mobile-second-title {
-  margin: 18px 0;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 .mobile-title-Active {
   color: #9439ff;
-  font-size: 20px!important;
+  font-size: 20px !important;
   font-weight: bold;
 }
 .mobile-second-title-Active {
   color: #9439ff;
-  font-size: 18px!important;
+  font-size: 18px !important;
   font-weight: bold;
 }
 .mobile-overview {
   margin-top: 50px;
 }
-.mobile-baseline{
-    align-items: baseline;
+.mobile-baseline {
+  align-items: baseline;
 }
 </style>

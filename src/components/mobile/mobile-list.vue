@@ -1,11 +1,11 @@
 <template>
   <div class="mobile-list-main">
     <div class="row flex-sp f18 mobile-btc">
-      <div class="row" v-if="mobilePage == 'lend'">
+      <div class="row ml8" v-if="mobilePage == 'lend'">
         <img src="../../assets/btc.png" alt="" class="mobile-btc-img" />
         <span class="fw">BCT bitcoin</span>
       </div>
-      <div class="row" v-if="mobilePage == 'farm'">
+      <div class="row ml8" v-if="mobilePage == 'farm'">
         <img src="../../assets/bct.png" alt="" class="mobile-farm-bct-img" />
         <span class="fw">BCT/usdt</span>
       </div>

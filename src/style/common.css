@@ -28,6 +28,9 @@
 .fn{
   font-weight: normal;
 }
+.ml8{
+  margin-left: 8px;
+}
 .purple-text {
   color: #9439ff;
 }

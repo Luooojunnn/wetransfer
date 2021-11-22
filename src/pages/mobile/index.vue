@@ -18,8 +18,8 @@ export default {
   },
   data() {
     return {
-      lendShow: false,
-      farmShow: true,
+      lendShow: true,
+      farmShow: false,
     };
   },
 };
