@@ -44,32 +44,32 @@ export default {
 </script>
 <style scoped>
 .mobile-list-main {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .mobile-bct-item {
   background: #26143a;
-  border: 1px solid #6d2cba;
+  border: 0.0625rem solid #6d2cba;
   opacity: 1;
-  border-radius: 24px;
-  padding: 12px 12px 15px;
+  border-radius: 1.5rem;
+  padding: 0.75rem 0.75rem 0.9375rem;
 }
 .mobile-bitcoin-img {
-  width: 24px;
+  width: 1.5rem;
 }
 .mobile-bct-img {
-  width: 37px;
+  width: 2.3125rem;
 }
 .mobile-item-img-box {
-  width: 40px;
+  width: 2.5rem;
   text-align: center;
   white-space: nowrap;
 }
 .mobile-tip-img {
-  width: 15px;
-  height: 15px;
-  margin-left: 8px;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin-left: 0.5rem;
 }
 .mt10 {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 </style>

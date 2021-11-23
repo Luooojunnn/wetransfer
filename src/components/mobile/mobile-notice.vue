@@ -23,25 +23,25 @@ export default {
 
 <style>
 #Notice-wrap {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 .notice-img {
-  width: 20px;
+  width: 1.25rem;
   background: linear-gradient(125deg, #80b6ff, #e539ff);
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .notice-desc {
   font-family: Barlow Condensed;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .out-kuang {
   margin: 0 auto;
   text-align: center;
   width: 80%;
-  height: 28px;
-  line-height: 28px;
+  height: 1.75rem;
+  line-height: 1.75rem;
   background: rgba(148, 57, 255, 0.1);
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 </style>

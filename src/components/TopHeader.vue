@@ -47,7 +47,7 @@ export default {
   name: "TopHeader",
   data() {
     return {
-      lists: ["Home", "Lend", "Farm", "Bonus"],
+      lists: ["Home", "Lend", "Farm"],
       curAc: "Home",
     };
   },
@@ -57,6 +57,7 @@ export default {
     }),
   },
   mounted() {
+     // 刷新页面时的tab-active
     let that = this;
     setTimeout(function () {
       that.curAc = that.$route.path.replace("/", "");

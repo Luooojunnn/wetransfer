@@ -26,13 +26,13 @@ export default {
 <style scoped>
 .mobile-header {
   width: 100%;
-  padding: 20px 20px;
+  padding: 1.25rem 1.25rem;
   box-sizing: border-box;
 }
 .TopHeader-icon {
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-right: 0.625rem;
   background-size: cover;
   background-image: url(../../assets/icon.png);
 }
@@ -40,20 +40,20 @@ export default {
   font-weight: bold;
 }
 .Wallet-menus {
-  width: 73px;
-  height: 25px;
-  border: 2px solid #8a3de5;
-  border-radius: 25px;
-  line-height: 25px;
+  width: 4.5625rem;
+  height: 1.5625rem;
+  border: 0.125rem solid #8a3de5;
+  border-radius: 1.5625rem;
+  line-height: 1.5625rem;
   justify-content: center;
 }
 .mobile-wallet {
-  width: 12px;
-  margin-right: 7px;
+  width: 0.75rem;
+  margin-right: 0.4375rem;
 }
 .mobile-menu {
-  width: 24px;
-  height: 24px;
-  margin-left: 13px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.8125rem;
 }
 </style>

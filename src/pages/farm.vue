@@ -40,19 +40,19 @@
             <td>{{ item.no }}</td>
             <td>
               {{ item.asset }}
-              <p class="f14">USDT</p>
+              <p class="pc-f14">USDT</p>
             </td>
             <td>
               {{ item.debt }}
-              <p class="f14">USDT</p>
+              <p class="pc-f14">USDT</p>
             </td>
             <td>
               {{ item.apy }}
-              <p class="f14">%</p>
+              <p class="pc-f14">%</p>
             </td>
             <td>
               {{ item.risk }}
-              <p class="f14">%</p>
+              <p class="pc-f14">%</p>
             </td>
             <td class="row" style="justify-content: flex-end">
               <div class="table-btn" @click="addToastShow=true">Add</div>

@@ -157,61 +157,61 @@ export default {
 .mobile-title {
   text-align: center;
   font-weight: bold;
-  margin-top: 34px;
-  margin-bottom: 62px;
+  margin-top: 2.125rem;
+  margin-bottom: 3.875rem;
 }
 .mobile-main {
-  padding: 0 18px 144px;
+  padding: 0 1.125rem 9rem;
   background: #000;
 }
 .mobile-position-img {
-  width: 16px;
-  margin-right: 10px;
+  width: 1rem;
+  margin-right: 0.625rem;
 }
 
 .mobile-overview-tip {
-  border: 1px dashed #fff;
+  border: 0.0625rem dashed #fff;
   width: 95%;
   margin: 0 auto;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px 0 20px;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  padding: 0 0.625rem 0 1.25rem;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .mobile-overview-tip-img {
-  width: 8px;
-  margin-left: 6px;
+  width: 0.5rem;
+  margin-left: 0.375rem;
 }
 
 .mr15 {
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 .mr11 {
-  margin-right: 11px;
+  margin-right: 0.6875rem;
 }
 .mobile-title-unactive p {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .mobile-second-title-unactive p {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .mobile-second-title {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
 }
 .mobile-title-Active {
   color: #9439ff;
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   font-weight: bold;
 }
 .mobile-second-title-Active {
   color: #9439ff;
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
   font-weight: bold;
 }
 .mobile-overview {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 .mobile-baseline {
   align-items: baseline;

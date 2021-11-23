@@ -70,63 +70,63 @@ export default {
 </script>
 <style scoped>
 .mobile-list-main {
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
 }
 .mobile-btc {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .mobile-btc-img {
-  width: 20px;
-  margin-right: 8px;
+  width: 1.25rem;
+  margin-right: 0.5rem;
 }
 .mobile-farm-bct-img {
-  width: 38px;
-  margin-right: 6px;
+  width: 2.375rem;
+  margin-right: 0.375rem;
 }
 .mobile-btc-right-btn {
   background: #26143a;
-  border: 1px solid #6d2cba;
-  border-radius: 33px;
-  width: 140px;
-  height: 36px;
-  line-height: 36px;
+  border: 0.0625rem solid #6d2cba;
+  border-radius: 2.0625rem;
+  width: 8.75rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 .mobile-list-box {
-  padding: 15px 12px;
+  padding: 0.9375rem 0.75rem;
   background: #170f23;
-  border: 1px solid #9439ff;
+  border: 0.0625rem solid #9439ff;
   opacity: 1;
-  border-radius: 9px;
+  border-radius: 0.5625rem;
 }
 .mobile-list-tip-img {
-  width: 12px;
-  height: 12px;
-  margin-left: 10px;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.625rem;
 }
 .mobile-list-inner > div {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .mobile-list-inner {
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 20px;
+  border-bottom: 0.0625rem solid #e1e1e1;
+  margin-bottom: 1.25rem;
 }
 
 .mobile-list-btn {
-  width: 100px;
-  height: 33px;
+  width: 6.25rem;
+  height: 2.0625rem;
   text-align: center;
-  line-height: 33px;
+  line-height: 2.0625rem;
   background: #26143a;
-  border: 1px solid #6d2cba;
+  border: 0.0625rem solid #6d2cba;
   opacity: 1;
-  border-radius: 33px;
+  border-radius: 2.0625rem;
 }
 .mobile-list-btns .mobile-list-btn:first-child {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .ml10 {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 </style>

@@ -1,26 +1,32 @@
-.f13{
-  font-size: 13px;
-}
-.f14{
+.pc-f14{
   font-size: 14px;
 }
-.f15{
-  font-size: 16px;
-}
-.f16{
-  font-size: 16px;
-}
-.f17{
-  font-size: 16px;
-}
-.f18{
-  font-size: 18px;
-}
-.f20{
+.pc-f20{
   font-size: 20px;
 }
+.f13{
+  font-size: 0.8125rem;
+}
+.f14{
+  font-size: 0.875rem;
+}
+.f15{
+  font-size: 1rem;
+}
+.f16{
+  font-size: 1rem;
+}
+.f17{
+  font-size: 1rem;
+}
+.f18{
+  font-size: 1.125rem;
+}
+.f20{
+  font-size: 1.25rem;
+}
 .f23{
-  font-size: 23px;
+  font-size: 1.4375rem;
 }
 .fw{
   font-weight: bold;

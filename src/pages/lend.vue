@@ -43,7 +43,7 @@
           </div>
           <div class="balance">{{ item.balance }}</div>
           <div class="apy">
-            {{ item.apy }}<span class="f14">%</span
+            {{ item.apy }}<span class="pc-f14">%</span
             ><img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="reward">
@@ -93,11 +93,11 @@
           </div>
           <div class="tvl">{{ item.tvl }}</div>
           <div class="utilization">
-            {{ item.utilization }}<span class="f14">%</span>
+            {{ item.utilization }}<span class="pc-f14">%</span>
           </div>
           <div class="dmc">{{ item.dmc }}</div>
           <div class="apy2">
-            {{ item.apy }}<span class="f14">%</span
+            {{ item.apy }}<span class="pc-f14">%</span
             ><img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="last2">

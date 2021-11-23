@@ -14,20 +14,20 @@
       <div class="home-number row">
         <div class="number-left">
           <p class="left-top text-color-shadow">
-            <span class="f20">$</span>2,748,234,980
+            <span class="pc-f20">$</span>2,748,234,980
           </p>
-          <p class="f20 text-color">Total value locked</p>
+          <p class="pc-f20 text-color">Total value locked</p>
         </div>
         <div class="number-right">
           <div class="right-item row">
             <p class="right-number text-color-shadow">
-              <span class="f20">$</span>2,74
+              <span class="pc-f20">$</span>2,74
             </p>
             <p class="text-color right-text">DEMA</p>
           </div>
           <div class="right-item row">
             <p class="right-number text-color-shadow">
-              <span class="f20">$</span>23,345,235
+              <span class="pc-f20">$</span>23,345,235
             </p>
             <p class="text-color right-text">User's daily revenue</p>
           </div>
@@ -50,13 +50,13 @@
                 />
                 <div class="list-item-text">
                   <p>BCT</p>
-                  <p class="f14">Bitcoin</p>
+                  <p class="pc-f14">Bitcoin</p>
                 </div>
               </div>
               <div class="list-item-right row">
-                <p>{{ item.num }}<span class="f14">%</span></p>
+                <p>{{ item.num }}<span class="pc-f14">%</span></p>
                 <div
-                  class="list-item-btn purple-text f20"
+                  class="list-item-btn purple-text pc-f20"
                   @click="changeLoginToastFc"
                 >
                   Deposit
@@ -81,12 +81,12 @@
                 />
                 <div class="list-item-text">
                   <p>BCT</p>
-                  <p class="f14">Bitcoin</p>
+                  <p class="pc-f14">Bitcoin</p>
                 </div>
               </div>
               <div class="list-item-right row">
-                <p>{{ item.num }}<span class="f14">%</span></p>
-                <div class="list-item-btn purple-text f20">3x Farm</div>
+                <p>{{ item.num }}<span class="pc-f14">%</span></p>
+                <div class="list-item-btn purple-text pc-f20">3x Farm</div>
               </div>
             </li>
           </ul>

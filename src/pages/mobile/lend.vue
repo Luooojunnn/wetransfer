@@ -94,24 +94,24 @@ export default {
 .mobile-title {
   text-align: center;
   font-weight: bold;
-  margin-top: 34px;
-  margin-bottom: 62px;
+  margin-top: 2.125rem;
+  margin-bottom: 3.875rem;
 }
 .mobile-main {
-  padding: 0 18px 144px;
+  padding: 0 1.125rem 9rem;
   background: #000;
 }
 .mobile-position-img {
-  width: 16px;
-  margin-right: 10px;
+  width: 1rem;
+  margin-right: 0.625rem;
 }
 .mobile-overview {
-  margin-top: 58px;
+  margin-top: 3.625rem;
 }
 .mobile-overview-ipt-box {
   position: relative;
-  width: 207px;
-  height: 30px;
+  width: 12.9375rem;
+  height: 1.875rem;
 }
 .mobile-overview-ipt {
   width: 100%;
@@ -120,33 +120,33 @@ export default {
   left: 0;
   top: 0;
   background: #170f23;
-  border: 1px solid #9439ff;
-  border-radius: 29px;
+  border: 0.0625rem solid #9439ff;
+  border-radius: 1.8125rem;
   color: #fff;
-  padding: 0 30px 0 10px;
+  padding: 0 1.875rem 0 0.625rem;
   box-sizing: border-box;
 }
 .mobile-overview-ipt-img {
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
   position: absolute;
-  right: 12px;
+  right: 0.75rem;
   top: 50%;
-  margin-top: -7px;
+  margin-top: -0.4375rem;
 }
 .mobile-overview-tip {
-  border: 1px dashed #fff;
+  border: 0.0625rem dashed #fff;
   width: 95%;
   margin: 0 auto;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 10px 0 20px;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  padding: 0 0.625rem 0 1.25rem;
   box-sizing: border-box;
-  margin-bottom: 25px;
-  margin-top: 24px;
+  margin-bottom: 1.5625rem;
+  margin-top: 1.5rem;
 }
 .mobile-overview-tip-img {
-  width: 8px;
-  margin-left: 6px;
+  width: 0.5rem;
+  margin-left: 0.375rem;
 }
 </style>
