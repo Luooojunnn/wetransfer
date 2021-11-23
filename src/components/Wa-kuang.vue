@@ -40,6 +40,13 @@
           <div>BUSD</div>
         </div>
       </div>
+      <div class="wakuang-available-tips2">
+        <span>Price Impact : 0.3%</span>
+      </div>
+      <div class="row flex-sp mb26">
+        <p style="width: 36%">Converted into</p>
+        <div class="conver-btn">0 BTC + 0BUSD</div>
+      </div>
       <div class="row flex-sp">
         <p>Debt</p>
         <p>0.15 BUSD</p>
@@ -231,7 +238,7 @@ height: 22px; */
 .wakuang-Optimum-wrap {
   display: flex;
   margin-top: 16px;
-  margin-bottom: 26px;
+  margin-bottom: 10px;
 }
 .wakuang-Optimum,
 .wakuang-Debt-Risk-num {
@@ -297,6 +304,24 @@ height: 22px; */
 .wakuang-tip-img {
   width: 18px;
   height: 18px;
+}
+.wakuang-available-tips2 {
+  font-size: 16px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+}
+.conver-btn {
+  height: 40px;
+  background: rgba(148, 57, 255, 0.1);
+  border: 1px solid #9439ff;
+  border-radius: 16px;
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+}
+.mb26 {
+  margin-bottom: 26px;
 }
 </style>
 <style>

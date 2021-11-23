@@ -107,11 +107,11 @@
     <!-- <DepositToast
       @closeToast="depositToastShow = false"
       v-if="depositToastShow"
-    ></DepositToast>
+    ></DepositToast> -->
     <WakuangToast
       @closeToast="wakuangToastShow = false"
       v-if="wakuangToastShow"
-    ></WakuangToast> -->
+    ></WakuangToast>
   </div>
 </template>
 
@@ -119,10 +119,11 @@
 import Notice from "../../components/mobile/mobile-notice";
 // import DepositToast from "../components/Deposit-toast";
 // import TopHeader from "../components/TopHeader.vue";
-// import WakuangToast from "../components/Wa-kuang.vue";
+import WakuangToast from "../../components/mobile/mobile-wakuang-toast.vue";
 export default {
   components: {
     Notice,
+    WakuangToast
   },
   data() {
     return {

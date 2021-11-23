@@ -169,7 +169,19 @@
   bottom: 0;
   margin: auto;
   border-radius: 20px;
-
+}
+.mobile-toast-bg{
+  background-color: #000;
+  width: 315px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 5px;
 }
 .toast-close-img{
   width: 28px;
@@ -198,6 +210,16 @@
   height: 40px;
   position: relative;
 }
+.toast-range-box span{
+  position: absolute;
+  top: 16px;
+}
+.mobile-toast-bg .toast-range-box{
+  height: 28px;
+}
+.mobile-toast-bg .toast-range-box span{
+  top: 8px;
+}
 .toast-range-ipt{
   position: absolute;
   left: 0;
@@ -218,11 +240,14 @@ input[type=range]{
   background: #592CBD;/*拖动块背景*/ 
   border-radius: 50%; /*外观设置为圆形*/  
 }
-/*  */
-.toast-range-box span{
-  position: absolute;
-  top: 16px;
+.mobile-toast-bg input[type=range]{ 
+  height: 1px;/*横条的高度，细的真的比较好看嗯*/  
 }
+.mobile-toast-bg input[type=range]::-webkit-slider-thumb {  
+  height:8px;/*拖动块高度*/  
+  width: 8px;/*拖动块宽度*/  
+}
+/*  */
 
 .global-big-wrap {
   position: absolute;
