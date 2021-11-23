@@ -4,7 +4,8 @@
     <MobileTopHeader v-if="mobileShow" />
     <router-view></router-view>
     <div class="global-big-wrap" v-if="loginIng">
-      <WalletToast @change-login-toast="changeLoginToast"></WalletToast>
+      <WalletToast  v-if="toastType === 1"></WalletToast>
+      <DepositToast  v-if="toastType === 2"></DepositToast>
     </div>
     <MobileMenu v-if="mobileShow"></MobileMenu>
   </div>
@@ -15,6 +16,7 @@ import TopHeader from "./components/TopHeader.vue";
 import MobileTopHeader from "./components/mobile/mobile-header.vue";
 import MobileMenu from "./components/mobile/mobile-menu";
 import WalletToast from "./components/Wallet-toast.vue";
+import DepositToast from "./components/Deposit-toast";
 import { mapState, mapMutations } from "vuex";
 
 export default {
@@ -28,6 +30,7 @@ export default {
     // 使用对象展开运算符将此对象混入到外部对象中
     ...mapState({
       loginIng: (state) => state.globalMmask.loginIng,
+      toastType: (state) => state.globalMmask.toastType,
     }),
   },
   mounted() {
@@ -49,6 +52,7 @@ export default {
     MobileTopHeader,
     MobileMenu,
     WalletToast,
+    DepositToast
   },
 };
 </script>
@@ -73,5 +77,6 @@ body {
   /* background: #fff; */
   filter: 0.2;
   background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
 }
 </style>

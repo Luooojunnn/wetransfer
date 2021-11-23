@@ -1,7 +1,11 @@
 
 // initial state
 const state = () => ({
-  userInfo: {}
+  userInfo: {
+    adr: '',
+    etherString: '',
+    walletAdressShow:''
+  }
 })
 
 // getters
@@ -18,8 +22,9 @@ const actions = {
 
 // mutations
 const mutations = {
-  setUserInfo (state, payload) {
-    state.loginIng = payload
+  setUserInfo(state, payload) {
+    console.log('payload', payload);
+    state.userInfo = payload
   },
 }
 

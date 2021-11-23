@@ -6,7 +6,7 @@
           src="../assets/close.png"
           alt=""
           class="toast-close-img"
-          @click="closeToast"
+          @click="changeLoginToastFc"
         />
       </div>
       <div class="deposit-toast-title row">
@@ -30,23 +30,35 @@
             alt=""
             class="deposit-toast-icon"
           />
-          <p class="deposit-toast-table-num">0.15424813</p>
+          <p class="deposit-toast-table-num">
+            <input type="number" class="deposit-toast-table-num-ipt">
+          </p>
           <p class="deposit-toast-table-text">MAX</p>
         </div>
       </div>
-      <div class="deposit-toast-btn">Confirm</div>
+      <div class="deposit-toast-btn" @click="confirmMyDeposit">Confirm</div>
     </div>
   </div>
 </template>
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {};
   },
   methods: {
-    closeToast() {
-      this.$emit("closeToast");
+    ...mapMutations({
+      changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
+     changeLoginToastFc(){
+      this.changeLoginToast({
+        toastType: -1
+      })
     },
+    confirmMyDeposit(){
+      console.log(this.$ethers)
+    }
   },
 };
 </script>
@@ -122,5 +134,11 @@ export default {
 }
 .deposit-toast-btn:hover {
   cursor: pointer;
+}
+.deposit-toast-table-num-ipt{
+      border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
 }
 </style>
