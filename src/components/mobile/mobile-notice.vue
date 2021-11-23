@@ -38,7 +38,7 @@ export default {
 .out-kuang {
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 82%;
   height: 1.75rem;
   line-height: 1.75rem;
   background: rgba(148, 57, 255, 0.1);

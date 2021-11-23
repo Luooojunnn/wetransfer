@@ -52,6 +52,7 @@ export default {
   opacity: 1;
   border-radius: 1.5rem;
   padding: 0.75rem 0.75rem 0.9375rem;
+  box-sizing: border-box;
 }
 .mobile-bitcoin-img {
   width: 1.5rem;

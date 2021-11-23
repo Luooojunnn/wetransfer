@@ -99,6 +99,7 @@ export default {
   border: 0.0625rem solid #9439ff;
   opacity: 1;
   border-radius: 0.5625rem;
+  box-sizing: border-box;
 }
 .mobile-list-tip-img {
   width: 0.75rem;
