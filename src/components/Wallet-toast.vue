@@ -105,7 +105,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #Wallet-toast {
   box-sizing: border-box;
   padding: 20px 23px;

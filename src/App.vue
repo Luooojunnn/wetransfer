@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 body {
   background: #111111;
   color: #fff;
@@ -67,6 +67,8 @@ body {
   margin: 0;
 }
 #app {
+  min-width: 1920px;
+    overflow-x: scroll;
 }
 .global-big-wrap {
   position: absolute;

@@ -150,7 +150,7 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style scoped>
 .mobile-main {
   padding: 0 1.125rem 9rem;
   background: #000;

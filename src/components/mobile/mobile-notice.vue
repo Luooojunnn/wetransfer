@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #Notice-wrap {
   margin-top: 0.3125rem;
 }

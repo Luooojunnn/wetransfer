@@ -85,7 +85,7 @@ export default {
   width: 50px;
 }
 </style>
-<style>
+<style scoped>
 .el-progress-bar__inner {
   background-color: #00ff00;
 }

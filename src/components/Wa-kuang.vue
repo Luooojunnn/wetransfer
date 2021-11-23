@@ -135,7 +135,7 @@ export default {
   background: #000;
 }
 </style>
-<style>
+<style scoped>
 #Wa-kuang-wrap {
   /* width: 490px;
   background: #000000;
@@ -324,7 +324,7 @@ height: 22px; */
   margin-bottom: 26px;
 }
 </style>
-<style>
+<style scoped>
 .el-progress-bar__inner {
   background-color: #00ff00;
 }

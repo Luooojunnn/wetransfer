@@ -143,7 +143,7 @@ export default {
   background: #000;
 }
 </style>
-<style>
+<style scoped>
 .mobile-wakuang-toast-title {
   display: flex;
   justify-content: space-between;
@@ -336,7 +336,7 @@ height: 1.375rem; */
   margin-bottom: 2.9375rem;
 }
 </style>
-<style>
+<style scoped>
 .el-progress-bar__inner {
   background-color: #00ff00;
 }
