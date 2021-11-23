@@ -15,6 +15,7 @@
 export default {
   data() {
     return {
+      curAc: "home",
       footerList: [
         {
           src: require("../../assets/mobile-home.png"),
@@ -33,8 +34,8 @@ export default {
   },
   methods: {
     toMobilePage(page) {
-        console.log(page)
-      this.$emit("toMobilePage", page);
+      this.curAc = "mobile" + page;
+      this.$router.push({ path: this.curAc, query: {} });
     },
   },
 };
@@ -46,7 +47,7 @@ export default {
   background: #000;
   position: fixed;
   left: 0;
-  bottom: 40px;
+  bottom: 0px;
   z-index: 10;
   padding: 5px 34px 0;
   box-sizing: border-box;

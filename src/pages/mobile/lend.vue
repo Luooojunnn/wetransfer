@@ -98,7 +98,8 @@ export default {
   margin-bottom: 62px;
 }
 .mobile-main {
-  padding: 0 18px 200px;
+  padding: 0 18px 144px;
+  background: #000;
 }
 .mobile-position-img {
   width: 16px;

@@ -5,7 +5,7 @@
       <div class="deMac">DeMac</div>
     </div>
     <div class="TopHeader-menus">
-      <div v-for="item in lists" :key="item" @click="goto(item)" :class="{ 'menus-active': item === page }">
+      <div v-for="item in lists" :key="item" @click="goto(item)" :class="{ 'menus-active': item === curAc }">
         {{ item }}
       </div>
     </div>
@@ -30,10 +30,6 @@ export default {
       lists: ["Home", "Lend", "Farm", "Bonus"],
       curAc: "Home",
     };
-  },
-  props: ["page"],
-  mounted(){
-    this.curAc = this.page
   },
   methods: {
     ...mapMutations({

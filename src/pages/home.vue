@@ -1,11 +1,7 @@
 <template>
   <div class="page">
-    <TopHeader page="Home" />
+    <!-- <TopHeader page="Home" /> -->
     <div class="main">
-      <!-- <div class="notic row">
-        <img src="../assets/bct.png" alt="" class="notice-img" />
-        <p>Notice：Important message notification window</p>
-      </div> -->
       <Notice></Notice>
       <div class="home-title-box">
         <p class="home-title">New Era for</p>
@@ -114,11 +110,11 @@
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
 import DepositToast from "../components/Deposit-toast";
-import TopHeader from "../components/TopHeader.vue";
+// import TopHeader from "../components/TopHeader.vue";
 import WakuangToast from "../components/Wa-kuang.vue";
 export default {
   components: {
-    TopHeader,
+    // TopHeader,
     Notice,
     Footer,
     DepositToast,

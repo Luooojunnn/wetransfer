@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <TopHeader  page="Lend"/>
+    <!-- <TopHeader  page="Lend"/> -->
     <div class="main">
       <Notice></Notice>
       <div class="page-big-tit">
@@ -120,10 +120,10 @@ import Notice from "../components/Notice";
 import Footer from "../components/Footer";
 import DepositToast from "../components/Deposit-toast";
 import WithdrawToast from "../components/Withdraw-toast";
-import TopHeader from "../components/TopHeader.vue";
+// import TopHeader from "../components/TopHeader.vue";
 export default {
   components: {
-    TopHeader,
+    // TopHeader,
     Notice,
     Footer,
     DepositToast,
