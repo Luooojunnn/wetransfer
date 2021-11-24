@@ -205,6 +205,16 @@
 .deposit-toast-btn:hover {
   cursor: pointer;
 }
+.mobile-deposit-toast-btn{
+  position: static;
+  width: 100%;
+  height: 1.8125rem;
+  text-align: center;
+  line-height: 1.8125rem;
+  border: 0.0625rem solid #9439ff;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+}
 .toast-range-box{
   width: 100%;
   height: 40px;
@@ -215,10 +225,10 @@
   top: 16px;
 }
 .mobile-toast-bg .toast-range-box{
-  height: 28px;
+  height: 1.75rem;
 }
 .mobile-toast-bg .toast-range-box span{
-  top: 8px;
+  top: 0.5rem;
 }
 .toast-range-ipt{
   position: absolute;

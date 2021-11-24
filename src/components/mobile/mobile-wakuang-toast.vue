@@ -143,7 +143,7 @@ export default {
   background: #000;
 }
 </style>
-<style>
+<style scoped>
 .mobile-wakuang-toast-title {
   display: flex;
   justify-content: space-between;
@@ -347,8 +347,8 @@ height: 1.375rem; */
   height: 0.0625rem;
   background: #fff;
 }
-.el-slider__bar {
-  height: 0.25rem;
+.mobile-toast-bg .el-slider__bar {
+  height: 0.0625rem;
   background: #fff;
 }
 .el-slider__button {
@@ -356,10 +356,10 @@ height: 1.375rem; */
   border-color: #592cbd;
 }
 .mobile-toast-bg .el-slider__button {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.375rem;
+  height: 0.375rem;
 }
 .mobile-toast-bg .el-slider__button-wrapper{
-    top: -17px;
+    top: -18px;
 }
 </style>

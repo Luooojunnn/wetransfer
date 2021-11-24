@@ -54,7 +54,7 @@
             Withdraw
           </div>
           <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px">补仓</div>
-          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px">赎回</div>
+          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px" @click="redeemClick">赎回</div>
         </div>
       </div>
     </div>
@@ -66,6 +66,11 @@ export default {
     return {};
   },
   props: ["mobilePage", "list"],
+  methods:{
+      redeemClick(){
+          this.$emit('redeemClick')
+      }
+  }
 };
 </script>
 <style scoped>

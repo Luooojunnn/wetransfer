@@ -8,7 +8,7 @@
         <p>Your position</p>
       </div>
       <div v-for="(item, index) in farmList" :key="index">
-        <List mobilePage="farm" :list="item"></List>
+        <List mobilePage="farm" :list="item" @redeemClick="redeemToastShow=true"></List>
       </div>
       <!-- 总览 -->
       <div class="mobile-overview">
@@ -75,17 +75,21 @@
         <BctList :list="item"></BctList>
       </div>
     </div>
+     <!-- 弹窗 -->
+    <RedeemToast @closeToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
   </div>
 </template>
 <script>
 import Notice from "../../components/mobile/mobile-notice";
 import List from "../../components/mobile/mobile-list";
 import BctList from "../../components/mobile/mobile-bctList";
+import RedeemToast from "../../components/mobile/mobile-redeem-toast";
 export default {
   components: {
     Notice,
     List,
     BctList,
+    RedeemToast
   },
   data() {
     return {
@@ -141,6 +145,7 @@ export default {
           num3: "651,245.00",
         },
       ],
+      redeemToastShow:false
     };
   },
   methods: {
