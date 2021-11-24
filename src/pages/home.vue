@@ -4,50 +4,50 @@
     <div class="main">
       <Notice></Notice>
       <div class="home-title-box">
-        <p class="home-title">New Era for</p>
-        <p class="home-title">Lend & Leverage Yield Farm</p>
+        <p class="home-title">
+          {{ homePageTit }}
+        </p>
       </div>
 
       <div class="home-title-text">
-        Skyrocket your payoff by maxmizing your investing utilization rate
+        {{ homePageTip }}
       </div>
       <div class="home-number row">
         <div class="number-left">
-          <p class="left-top text-color-shadow">
-            <span class="pc-f20">$</span>2,748,234,980
+          <p class="text-color-shadow">
+            <span class="pc-f20">$</span>
+            <span class="total-value-number">
+              {{ homePageTotalVal }}
+            </span>
           </p>
-          <p class="pc-f20 text-color">Total value locked</p>
+          <p class="pc-f20 text-color total-value-lock">
+            {{ homePageTotalValLock }}
+          </p>
         </div>
         <div class="number-right">
           <div class="right-item row">
-            <p class="right-number text-color-shadow">
-              <span class="pc-f20">$</span>2,74
-            </p>
-            <p class="text-color right-text">DEMA</p>
+            <p class="right-number text-color-shadow total-value-number1"><span class="pc-f20">$</span>{{ demaNum }}</p>
+            <p class="text-color right-text dema-daily1">{{ demaTxt }}</p>
           </div>
           <div class="right-item row">
-            <p class="right-number text-color-shadow">
-              <span class="pc-f20">$</span>23,345,235
+            <p class="right-number text-color-shadow total-value-number1">
+              <span class="pc-f20">$</span>{{ dailyNum }}
             </p>
-            <p class="text-color right-text">User's daily revenue</p>
+            <p class="text-color right-text dema-daily1">{{ dailyTxt }}</p>
           </div>
         </div>
       </div>
       <div class="lend-farm-list row">
         <div class="list-box">
           <div class="list-title row">
-            <p class="text-color list-title-left">Lend</p>
-            <p class="more purple-text">More></p>
+            <p class="text-color list-title-left">{{ lendTxt }}</p>
+            <p class="more purple-text">{{ moreTxt }}</p>
           </div>
           <ul>
             <li class="row" v-for="(item, index) in lendList" :key="index">
               <span class="list-icon">{{ index + 1 }}</span>
               <div class="list-item-left row">
-                <img
-                  src="../assets/list-icon.png"
-                  alt=""
-                  class="list-icon-img"
-                />
+                <img src="../assets/list-icon.png" alt="" class="list-icon-img" />
                 <div class="list-item-text">
                   <p>BCT</p>
                   <p class="pc-f14">Bitcoin</p>
@@ -55,12 +55,7 @@
               </div>
               <div class="list-item-right row">
                 <p>{{ item.num }}<span class="pc-f14">%</span></p>
-                <div
-                  class="list-item-btn purple-text pc-f20"
-                  @click="depositToastShow=true"
-                >
-                  Deposit
-                </div>
+                <div class="list-item-btn purple-text pc-f20" @click="depositToastShow = true">Deposit</div>
               </div>
             </li>
           </ul>
@@ -74,11 +69,7 @@
             <li class="row" v-for="(item, index) in farmList" :key="index">
               <span class="list-icon">{{ index + 1 }}</span>
               <div class="list-item-left row">
-                <img
-                  src="../assets/list-icon.png"
-                  alt=""
-                  class="list-icon-img"
-                />
+                <img src="../assets/list-icon.png" alt="" class="list-icon-img" />
                 <div class="list-item-text">
                   <p>BCT</p>
                   <p class="pc-f14">Bitcoin</p>
@@ -95,14 +86,8 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast
-      @closeToast="depositToastShow = false"
-      v-if="depositToastShow"
-    ></DepositToast>
-    <WakuangToast
-      @closeToast="wakuangToastShow = false"
-      v-if="wakuangToastShow"
-    ></WakuangToast>
+    <DepositToast @closeToast="depositToastShow = false" v-if="depositToastShow"></DepositToast>
+    <WakuangToast @closeToast="wakuangToastShow = false" v-if="wakuangToastShow"></WakuangToast>
   </div>
 </template>
 
@@ -125,6 +110,16 @@ export default {
   },
   data() {
     return {
+      homePageTit: "New Era for Lend & Leverage Yield Farm",
+      homePageTip: "Skyrocket your payoff by maxmizing your investing utilization rate",
+      homePageTotalVal: "2,748,234,980",
+      homePageTotalValLock: "Total value locked",
+      demaNum: "2,74",
+      demaTxt: "DEMA",
+      dailyNum: "23,345,235",
+      dailyTxt: "User's daily revenue",
+      lendTxt: "Lend",
+      moreTxt: "More>",
       lendList: [
         {
           num: 563.32,
@@ -145,16 +140,16 @@ export default {
       wakuangToastShow: true,
     };
   },
-  methods:{
+  methods: {
     ...mapMutations({
       changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
     }),
-    changeLoginToastFc(){
+    changeLoginToastFc() {
       this.changeLoginToast({
-        toastType: 2
-      })
+        toastType: 2,
+      });
     },
-  }
+  },
 };
 </script>
 <style scoped>
@@ -178,6 +173,8 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  width: 603px;
+  margin: 0 auto;
 }
 
 .home-number {
@@ -186,8 +183,13 @@ export default {
   justify-content: center;
 }
 .home-title-text {
+  height: 28px;
+  font-size: 30px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
   text-align: center;
-  margin-bottom: 52px;
+  margin-bottom: 59px;
   font-family: Barlow Condensed;
 }
 .number-left {
@@ -195,9 +197,16 @@ export default {
   font-family: Barlow Condensed;
 }
 .left-top {
-  font-size: 38px;
+  /* font-size: 38px;
   line-height: 32px;
-  font-weight: bold;
+  font-weight: bold; */
+}
+.total-value-number {
+  height: 55px;
+  font-size: 36px;
+  font-family: Barlow Condensed;
+  font-weight: 800;
+  color: #ffffff;
 }
 .text-color-shadow {
   text-shadow: 3px 2px 8px #c797ff;
@@ -261,15 +270,16 @@ export default {
 .lend-farm-list li:after {
   content: "";
   position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
   background: linear-gradient(157deg, #a4e1c2, #9439ff);
-  border-radius: 20px;
+  border-radius: 18px;
   content: "";
   z-index: -1;
 }
+
 .list-icon {
   width: 40px;
   height: 40px;
@@ -316,5 +326,28 @@ export default {
 .farm-box .list-icon {
   background: linear-gradient(135deg, #80b6ff 1%, #e539ff 100%);
   color: #391068;
+}
+.total-value-lock {
+  font-size: 32px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.8;
+  background: linear-gradient(0deg, #a4e1c2 0.5126953125%, #9439ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+}
+.dema-daily {
+  height: 17px;
+  font-size: 22px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.8;
+
+  background: linear-gradient(125deg, #a4e1c2 0.5126953125%, #9439ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
