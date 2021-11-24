@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" :class="!mobileShow ? 'min1920' : ''">
     <TopHeader v-if="!mobileShow" />
     <MobileTopHeader v-if="mobileShow" />
     <router-view></router-view>
     <div class="global-big-wrap" v-if="loginIng">
-      <WalletToast  v-if="toastType === 1"></WalletToast>
-      <DepositToast  v-if="toastType === 2"></DepositToast>
+      <WalletToast v-if="toastType === 1"></WalletToast>
+      <DepositToast v-if="toastType === 2"></DepositToast>
     </div>
     <MobileMenu v-if="mobileShow"></MobileMenu>
   </div>
@@ -52,7 +52,7 @@ export default {
     MobileTopHeader,
     MobileMenu,
     WalletToast,
-    DepositToast
+    DepositToast,
   },
 };
 </script>
@@ -67,8 +67,11 @@ body {
   margin: 0;
 }
 #app {
+  background: #000;
+}
+.min1920 {
   min-width: 1920px;
-    overflow-x: scroll;
+  overflow-x: scroll;
 }
 .global-big-wrap {
   position: absolute;

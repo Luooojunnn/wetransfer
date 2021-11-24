@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <Notice></Notice>
     <div class="mobile-home-title-box">
       <img

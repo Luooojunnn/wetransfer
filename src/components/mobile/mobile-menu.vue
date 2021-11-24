@@ -70,6 +70,7 @@ export default {
   z-index: 10;
   padding: 0.3125rem 2.125rem 0;
   box-sizing: border-box;
+  color: #fff;
 }
 .mobile-footer-img {
   width: 1.6875rem;

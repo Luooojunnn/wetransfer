@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <Notice></Notice>
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
