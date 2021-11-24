@@ -4,8 +4,11 @@
     <p>faq</p>
     <p>Audit</p>
     <div class="row">
-      <img src="../assets/bct.png" alt="" class="bottom-icon" />
-      <img src="../assets/bct.png" alt="" class="bottom-icon" />
+      <img src="../assets/telegram-icon.png" alt="" class="bottom-icon" />
+      <img src="../assets/wechat-icon.png" alt="" class="bottom-icon" />
+      <img src="../assets/twitter-icon.png" alt="" class="bottom-icon" />
+      <img src="../assets/discord-icon.png" alt="" class="bottom-icon" />
+      <img src="../assets/github-icon.png" alt="" class="bottom-icon" />
     </div>
   </div>
 </template>
