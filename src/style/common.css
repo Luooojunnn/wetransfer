@@ -1,5 +1,5 @@
 body{
-  background: #000;
+  background: #111;
   min-width: 1920px;
 }
 .pc-f14{
@@ -56,7 +56,7 @@ body{
   justify-content: space-between;
 }
 .page {
-  background: #000;
+  background: #111;
   color: #fff;
 }
 .notic {

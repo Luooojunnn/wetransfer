@@ -6,52 +6,43 @@
       <div class="page-big-tit">
         <span class="big-tit">Low Risk Farm</span>
       </div>
-      <div class="bct row">
-        <div class="position-title row">
-          <img src="../assets/bct.png" alt="" class="position-img" />
-          <p>Your position</p>
+      <div class="first-lend-tabl-wrap">
+        <div class="bct row">
+          <div class="position-title row">
+            <img src="../assets/location.png" alt="" class="position-img" />
+            <p class="position-desc">Your position</p>
+          </div>
+          <div class="row">
+            <p class="lend-mdx">5MDX+6DEMA</p>
+            <img src="../assets/kongtou-gift.png" alt="" class="gift-img" />
+          </div>
         </div>
-        <div class="row">
-          <p>5MDX+6DEMA</p>
-          <img src="../assets/bct.png" alt="" class="gift-img" />
-        </div>
-      </div>
 
-      <div class="farm-table">
-        <div class="farm-table-thead row">
-          <div style="width: 5%"></div>
-          <div class="pool">Pool</div>
-          <div class="balance">Balance</div>
-          <div class="apy">APY</div>
-          <div class="reward">Reward</div>
-          <div class="last"></div>
-        </div>
-        <div
-          class="farm-table-item row"
-          v-for="(item, index) in lendList"
-          :key="index"
-        >
-          <div style="width: 5%">
-            <img
-              src="../assets/list-icon.png"
-              alt=""
-              class="farm-table-item-img"
-            />
+        <div class="farm-table">
+          <div class="farm-table-thead row">
+            <div style="width: 5%"></div>
+            <div class="pool">Pool</div>
+            <div class="balance">Balance</div>
+            <div class="apy">APY</div>
+            <div class="reward">Reward</div>
+            <div class="last"></div>
           </div>
-          <div class="pool">
-            {{ item.pool }}<span class="bitconin">Bitcoin</span>
-          </div>
-          <div class="balance">{{ item.balance }}</div>
-          <div class="apy">
-            {{ item.apy }}<span class="pc-f14">%</span
-            ><img src="../assets/tip.png" alt="" class="tip-img" />
-          </div>
-          <div class="reward">
-            {{ item.reward }}
-          </div>
-          <div class="last row">
-            <div class="last-btn purple-text" @click="depositToastShow=true">Deposit</div>
-            <div class="last-btn purple-text" @click="withdrawToastShow=true">Withdraw</div>
+          <div class="farm-table-item row" v-for="(item, index) in lendList" :key="index">
+            <div style="width: 5%">
+              <img src="../assets/list-icon.png" alt="" class="farm-table-item-img" />
+            </div>
+            <div class="pool">{{ item.pool }}<span class="bitconin">Bitcoin</span></div>
+            <div class="balance">{{ item.balance }}</div>
+            <div class="apy">
+              {{ item.apy }}<span class="pc-f14">%</span><img src="../assets/tip.png" alt="" class="tip-img" />
+            </div>
+            <div class="reward">
+              {{ item.reward }}
+            </div>
+            <div class="last row">
+              <div class="last-btn purple-text" @click="depositToastShow = true">Deposit</div>
+              <div class="last-btn purple-text" @click="withdrawToastShow = true">Withdraw</div>
+            </div>
           </div>
         </div>
       </div>
@@ -63,7 +54,6 @@
           <img src="../assets/search-icon.png" alt="" class="ipt-img" />
         </div>
       </div>
-
       <div class="farm-table">
         <div class="farm-table-thead row">
           <div style="width: 7%"></div>
@@ -71,46 +61,30 @@
           <div class="tvl">TVL</div>
           <div class="utilization">Utilization</div>
           <div class="dmc">DEMA/w</div>
-          <div class="apy2">
-            APY<img src="../assets/tip.png" alt="" class="tip-img" />
-          </div>
+          <div class="apy2">APY<img src="../assets/tip.png" alt="" class="tip-img" /></div>
           <div class="last2"></div>
         </div>
-        <div
-          class="farm-table-item row"
-          v-for="(item, index) in list2"
-          :key="index"
-        >
+        <div class="farm-table-item row" v-for="(item, index) in list2" :key="index">
           <div style="width: 7%">
-            <img
-              src="../assets/list-icon.png"
-              alt=""
-              class="farm-table-item-img"
-            />
+            <img src="../assets/list-icon.png" alt="" class="farm-table-item-img" />
           </div>
-          <div class="pool2">
-            {{ item.pool }}<span class="bitconin">Bitcoin</span>
-          </div>
+          <div class="pool2">{{ item.pool }}<span class="bitconin">Bitcoin</span></div>
           <div class="tvl">{{ item.tvl }}</div>
-          <div class="utilization">
-            {{ item.utilization }}<span class="pc-f14">%</span>
-          </div>
+          <div class="utilization">{{ item.utilization }}<span class="pc-f14">%</span></div>
           <div class="dmc">{{ item.dmc }}</div>
           <div class="apy2">
-            {{ item.apy }}<span class="pc-f14">%</span
-            ><img src="../assets/tip.png" alt="" class="tip-img" />
+            {{ item.apy }}<span class="pc-f14">%</span><img src="../assets/tip.png" alt="" class="tip-img" />
           </div>
           <div class="last2">
-            <div class="last-btn purple-text" @click="depositToastShow=true">Deposit</div>
+            <div class="last-btn purple-text" @click="depositToastShow = true">Deposit</div>
           </div>
         </div>
       </div>
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
-    <WithdrawToast @closeToast="withdrawToastShow=false" v-if="withdrawToastShow"></WithdrawToast>
-
+    <DepositToast @closeToast="depositToastShow = false" v-if="depositToastShow"></DepositToast>
+    <WithdrawToast @closeToast="withdrawToastShow = false" v-if="withdrawToastShow"></WithdrawToast>
   </div>
 </template>
 
@@ -127,7 +101,7 @@ export default {
     Notice,
     Footer,
     DepositToast,
-    WithdrawToast
+    WithdrawToast,
   },
   data() {
     return {
@@ -155,8 +129,8 @@ export default {
           apy: "2033.12",
         },
       ],
-      depositToastShow:false,
-      withdrawToastShow:false
+      depositToastShow: false,
+      withdrawToastShow: false,
     };
   },
 };
@@ -180,8 +154,9 @@ export default {
 }
 .position-title {
   margin-bottom: 12px;
+  padding-top: 9px;
 }
-.position-img{
+.position-img {
   width: 32px;
   height: 26px;
   margin-right: 12px;
@@ -200,7 +175,7 @@ export default {
 .gift-img {
   width: 57px;
   height: 50px;
-  margin-left: 12px;
+  margin-left: 48px;
 }
 .bct-box {
   padding: 18px 42px 42px 27px;
@@ -213,12 +188,12 @@ export default {
 .bct-box:after {
   content: "";
   position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
   background: linear-gradient(157deg, #a4e1c2, #9439ff);
-  border-radius: 20px;
+  border-radius: 28px;
   content: "";
   z-index: -1;
 }
@@ -308,6 +283,7 @@ export default {
 
 .farm-table-item,
 .farm-table-thead {
+  box-sizing: border-box;
   text-align: center;
   font-size: 24px;
   justify-content: space-between;
@@ -315,6 +291,12 @@ export default {
   padding: 20px 0;
   background: url("../assets/bg.png") center center no-repeat;
   background-size: cover;
+}
+.farm-table-item {
+  height: 60px;
+}
+.farm-table-thead {
+  height: 50px;
 }
 
 .farm-table-item {
@@ -327,10 +309,10 @@ export default {
 .farm-table-item:after {
   content: "";
   position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
   background: linear-gradient(157deg, #a4e1c2, #9439ff);
   border-radius: 28px;
   content: "";
@@ -439,6 +421,7 @@ export default {
   font-weight: 600;
   color: #ffffff;
   text-align: center;
+  text-shadow: 6px 5px 10px #9439ff;
 }
 .page-big-tit {
   text-align: center;
@@ -447,5 +430,27 @@ export default {
 .table-icon {
   width: 34px;
   height: 34px;
+}
+.position-desc {
+  height: 22px;
+  font-size: 24px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #ffffff;
+}
+.lend-mdx {
+  height: 23px;
+  font-size: 30px;
+  font-family: Barlow Condensed;
+  font-weight: 800;
+  color: #ffffff;
+}
+.first-lend-tabl-wrap {
+  padding: 13px 13px 30px 7px;
+  box-sizing: border-box;
+  background: #0a0a0a;
+  width: 1060px;
+  height: 220px;
+  border-radius: 20px;
 }
 </style>
