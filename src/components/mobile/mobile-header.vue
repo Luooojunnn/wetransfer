@@ -5,7 +5,7 @@
       <div class="deMac purple-text f15">DeMac</div>
     </div>
     <div class="row">
-      <div class="Wallet-menus purple-text row f13" @click="changeLoginToast">
+      <div class="Wallet-menus purple-text row f13" @click="changeLoginToastFc" v-if="!userInfo.adr">
         <img src="../../assets/wallet.png" alt="" class="mobile-wallet" />
         Wallet
       </div>
@@ -14,12 +14,33 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from "vuex";
+
 export default {
   data() {
     return {};
   },
+  computed: {
+    ...mapState({
+      userInfo: (state) => state.setUserInfo.userInfo,
+    }),
+  },
+  mounted() {
+    // 刷新页面时的tab-active
+    let that = this;
+    setTimeout(function () {
+      that.curAc = that.$route.path.replace("/", "");
+    }, 100);
+  },
   methods: {
-    changeLoginToast() {},
+    ...mapMutations({
+      changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    }),
+    changeLoginToastFc() {
+      this.changeLoginToast({
+        toastType: 1,
+      });
+    },
   },
 };
 </script>
