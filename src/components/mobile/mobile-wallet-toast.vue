@@ -130,62 +130,62 @@ export default {
 
 <style scoped>
 #Wallet-toast {
-  height: 165px;
-  padding-top: 24px;
+  height: 10.3125rem;
+  padding-top: 1.5rem;
 }
 .h231 {
-  height: 231px !important;
+  height: 14.4375rem !important;
 }
 .mobile-close-box {
-  margin-bottom: 2.0625rem;
+  margin-bottom: 1.875rem;
   color: #fff;
 }
 .Wallet-toast-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
 }
 .Wallet-toast-title-desc {
-  width: 154px;
-  height: 22px;
-  font-size: 30px;
+  width: 9.625rem;
+  height: 1.375rem;
+  font-size: 1.875rem;
   font-family: Barlow Condensed;
   font-weight: 500;
   color: #ffffff;
   flex: 3;
 }
 .Wallet-toast-title-notice-img {
-  width: 19px;
-  height: 19px;
+  width: 1.1875rem;
+  height: 1.1875rem;
   cursor: pointer;
 }
 .Wallet-toast-detail-wrap {
-  /* width: 450px;
+  /* width: 28.125rem;
   background: rgba(148, 57, 255, 0.1);
-  border: 1px solid;
-  border-radius: 20px;
+  border: 0.0625rem solid;
+  border-radius: 1.25rem;
   border-image: linear-gradient(157deg, #a4e1c2, #9439ff) 10 10;
   background-image: linear-gradient(157deg, #a4e1c2, #9439ff);
-  padding: 1px;
+  padding: 0.0625rem;
   box-sizing: border-box; */
 }
 .Wallet-toast-detail-wrap-item {
   /* background: #000;
-  width: 446px;
-  border-radius: 20px;
-  padding: 18px 41px;
+  width: 27.875rem;
+  border-radius: 1.25rem;
+  padding: 1.125rem 2.5625rem;
   box-sizing: border-box; */
 }
 .Wallet-toast-title-notice-huli {
-  width: 25px;
-  height: 23px;
+  width: 1.5625rem;
+  height: 1.4375rem;
 }
 .Wallet-toast-title-notice-metamask {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: Barlow Condensed;
   font-weight: 500;
   color: #ffffff;
-  margin-left: 80px;
+  margin-left: 5rem;
 }
 #global-back-toast {
   height: 100vh;
@@ -193,7 +193,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  filter: blur(5px);
+  filter: blur(0.3125rem);
 }
 .Connect-Wallet-tips {
   font-family: Barlow Condensed;
@@ -202,42 +202,42 @@ export default {
 }
 .lanse-quan {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   background: #592cbd;
   border: 1px solid #000000;
   border-radius: 50%;
   vertical-align: text-top;
 }
 .lanse-quan-desc {
-  margin-left: 6px;
+  margin-left: 0.375rem;
   color: #fff;
 }
 .Copy-Address {
   font-family: Barlow;
   font-weight: normal;
   color: #ffffff;
-  text-shadow: 0px 0px 12px rgba(105, 26, 199, 0.16);
+  text-shadow: 0rem 0rem 0.75rem rgba(105, 26, 199, 0.16);
   opacity: 1;
 }
 .copy-img-wallet-toast {
   width: 9x;
-  height: 10px;
-  margin-right: 6px;
+  height: 0.625rem;
+  margin-right: 0.375rem;
   vertical-align: sub;
 }
 .Copy-Address,
 .BSC {
   display: inline-block;
-  /* width: 84px;
-height: 17px; */
+  /* width: 5.25rem;
+height: 1.0625rem; */
   font-family: Barlow Condensed;
   font-weight: 500;
   color: #ffffff;
   white-space: pre;
 }
 .BSC-wrap {
-  margin-left: 52px;
+  margin-left: 3.25rem;
 }
 .Copy-Address-BSC-wrap {
   display: flex;
@@ -247,16 +247,16 @@ height: 17px; */
   align-items: center;
   cursor: pointer;
   width: 100%;
-  height: 36px;
-  padding: 6px 15px;
+  height: 2.25rem;
+  padding: 0.375rem 0.9375rem;
   box-sizing: border-box;
   background: #10071b;
   border: 1px solid #8032dd;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 .lanquan-wrap,
 .Copy-Address-BSC-wrap {
-  margin-top: 13px;
+  margin-top: 0.8125rem;
 }
 .Copy-wrap,
 .BSC-wrap {
@@ -270,15 +270,15 @@ height: 17px; */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 .already-login-Connect-Wallet {
   width: 100%;
   height: 100%;
   background: #000;
-  border-radius: 8px;
-  padding: 8px 10px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.625rem;
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 </style>
