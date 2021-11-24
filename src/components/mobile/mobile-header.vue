@@ -22,19 +22,23 @@
     </div>
     <!-- 弹窗 -->
     <Menu @closeToast="showMenu = false" v-if="showMenu"></Menu>
+    <Invite @closeToast="showInvite = false" v-if="showInvite"></Invite>
   </div>
 </template>
 <script>
 import Menu from "./mobile-header-menu.vue";
+import Invite from "./mobile-invite-toast.vue";
 import { mapState, mapMutations } from "vuex";
 
 export default {
   components: {
     Menu,
+    Invite
   },
   data() {
     return {
       showMenu: false,
+      showInvite:true
     };
   },
   computed: {
