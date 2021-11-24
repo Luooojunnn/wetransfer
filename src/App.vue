@@ -3,10 +3,11 @@
     <TopHeader v-if="!mobileShow" />
     <MobileTopHeader v-if="mobileShow" />
     <router-view></router-view>
-    <div class="global-big-wrap" v-if="loginIng">
-      <WalletToast v-if="toastType === 1"></WalletToast>
-      <DepositToast v-if="toastType === 2"></DepositToast>
-    </div>
+    <!-- <div class="global-big-wrap" v-if="loginIng"> -->
+      <WalletToast v-if="!mobileShow&&toastType === 1"></WalletToast>
+      <MobileWalletToast v-if="mobileShow&&toastType === 1"></MobileWalletToast>
+      <!-- <DepositToast v-if="toastType === 2"></DepositToast> -->
+    <!-- </div> -->
     <MobileMenu v-if="mobileShow"></MobileMenu>
   </div>
 </template>
@@ -16,7 +17,8 @@ import TopHeader from "./components/TopHeader.vue";
 import MobileTopHeader from "./components/mobile/mobile-header.vue";
 import MobileMenu from "./components/mobile/mobile-menu";
 import WalletToast from "./components/Wallet-toast.vue";
-import DepositToast from "./components/Deposit-toast";
+import MobileWalletToast from "./components/mobile/mobile-wallet-toast";
+// import DepositToast from "./components/Deposit-toast";
 import { mapState, mapMutations } from "vuex";
 
 export default {
@@ -52,7 +54,8 @@ export default {
     MobileTopHeader,
     MobileMenu,
     WalletToast,
-    DepositToast,
+    // DepositToast,
+    MobileWalletToast
   },
 };
 </script>
@@ -73,15 +76,5 @@ body {
   min-width: 1920px;
   overflow-x: scroll;
 }
-.global-big-wrap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* background: #fff; */
-  filter: 0.2;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 100;
-}
+
 </style>
