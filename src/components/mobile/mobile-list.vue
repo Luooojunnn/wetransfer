@@ -49,8 +49,8 @@
           <p v-if="mobilePage == 'farm'" class="fn"># 12357</p>
         </div>
         <div class="row purple-text fw">
-          <div v-if="mobilePage == 'lend'" class="mobile-list-btn">Deposit</div>
-          <div v-if="mobilePage == 'lend'" class="mobile-list-btn">
+          <div v-if="mobilePage == 'lend'" class="mobile-list-btn" @click="depositClick">Deposit</div>
+          <div v-if="mobilePage == 'lend'" class="mobile-list-btn" @click="withdrawClick">
             Withdraw
           </div>
           <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px" @click="addClick">补仓</div>
@@ -72,6 +72,12 @@ export default {
       },
       addClick(){
           this.$emit('addClick')
+      },
+      depositClick(){
+          this.$emit('depositClick')
+      },
+      withdrawClick(){
+          this.$emit('withdrawClick')
       },
   }
 };

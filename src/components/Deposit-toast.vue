@@ -6,7 +6,7 @@
           src="../assets/close.png"
           alt=""
           class="toast-close-img"
-          @click="changeLoginToastFc"
+          @click="closeToast"
         />
       </div>
       <div class="deposit-toast-title row">
@@ -30,9 +30,7 @@
             alt=""
             class="deposit-toast-icon"
           />
-          <p class="deposit-toast-table-num">
-            <input type="number" class="deposit-toast-table-num-ipt">
-          </p>
+          <input type="number" class="deposit-toast-ipt" v-model="depositVal" />
           <p class="deposit-toast-table-text">MAX</p>
         </div>
       </div>
@@ -45,20 +43,25 @@ import { mapMutations } from "vuex";
 
 export default {
   data() {
-    return {};
+    return {
+      depositVal: 0,
+    };
   },
   methods: {
     ...mapMutations({
       changeLoginToast: "changeGlobalMask", // 将 `this.add()` 映射为 `this.$store.commit('increment')`
     }),
-     changeLoginToastFc(){
-      this.changeLoginToast({
-        toastType: -1
-      })
+    closeToast() {
+      this.$emit("closeToast");
     },
-    confirmMyDeposit(){
-      console.log(this.$ethers)
-    }
+    changeLoginToastFc() {
+      // this.changeLoginToast({
+      //   toastType: -1,
+      // });
+    },
+    confirmMyDeposit() {
+      console.log(this.$ethers);
+    },
   },
 };
 </script>
@@ -110,16 +113,11 @@ export default {
   border-radius: 30px;
   position: relative;
 }
-.deposit-toast-table-num {
-  margin-left: 32px;
-  font-size: 24px;
-}
 .deposit-toast-table-text {
   flex-grow: 1;
   text-align: right;
   font-size: 30px;
 }
-
 .deposit-toast-btn {
   width: 450px;
   height: 40px;
@@ -135,10 +133,16 @@ export default {
 .deposit-toast-btn:hover {
   cursor: pointer;
 }
-.deposit-toast-table-num-ipt{
-      border: none;
-    outline: none;
-    background: transparent;
-    color: #fff;
+.deposit-toast-ipt {
+  margin-left: 32px;
+  font-size: 24px;
+  background: #000;
+  border: none;
+  color: #fff;
+}
+.deposit-toast-title-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 </style>

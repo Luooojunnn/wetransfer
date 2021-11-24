@@ -63,7 +63,8 @@
                 <p>{{ item.num }}<span class="f13">%</span></p>
                 <div
                   class="mobile-list-item-btn purple-text f13"
-                >
+                  @click="depositToastShow=true"
+                  >
                   Deposit
                 </div>
               </div>
@@ -104,10 +105,10 @@
       </div>
     </div>
     <!-- 弹窗 -->
-    <!-- <DepositToast
+    <DepositToast
       @closeToast="depositToastShow = false"
       v-if="depositToastShow"
-    ></DepositToast> -->
+    ></DepositToast>
     <WakuangToast
       @closeToast="wakuangToastShow = false"
       v-if="wakuangToastShow"
@@ -117,13 +118,14 @@
 
 <script>
 import Notice from "../../components/mobile/mobile-notice";
-// import DepositToast from "../components/Deposit-toast";
+import DepositToast from "../../components/mobile/mobile-deposit-toast";
 // import TopHeader from "../components/TopHeader.vue";
 import WakuangToast from "../../components/mobile/mobile-wakuang-toast.vue";
 export default {
   components: {
     Notice,
-    WakuangToast
+    WakuangToast,
+    DepositToast
   },
   data() {
     return {
@@ -247,6 +249,7 @@ export default {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 0;
 }
 .mobile-list-no {
   position: absolute;
@@ -276,6 +279,8 @@ export default {
   border: 0.0625rem solid #9439ff;
   margin-left: 0.9375rem;
   border-radius: 1rem;
+  position: relative;
+  z-index: 10;
 }
 .mobile-farm-box .mobile-list-title-left {
   background: linear-gradient(125deg, #e539ff 0%, #80b6ff 30%);

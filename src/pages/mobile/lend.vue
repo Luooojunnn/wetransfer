@@ -8,7 +8,7 @@
         <p>Your position</p>
       </div>
       <div v-for="(item, index) in lendList" :key="index">
-        <List mobilePage="lend" :list="item"></List>
+        <List mobilePage="lend" :list="item" @withdrawClick="withdrawToastShow=true" @depositClick="depositToastShow=true"></List>
       </div>
       <!-- 总览 -->
       <div class="mobile-overview">
@@ -46,17 +46,25 @@
         <BctList :list="item"></BctList>
       </div>
     </div>
+    
+    <!-- 弹窗 -->
+    <DepositToast @closeToast="depositToastShow=false" v-if="depositToastShow"></DepositToast>
+    <WithdrawToast @closeToast="withdrawToastShow=false" v-if="withdrawToastShow"></WithdrawToast>
   </div>
 </template>
 <script>
 import Notice from "../../components/mobile/mobile-notice";
 import List from "../../components/mobile/mobile-list";
 import BctList from "../../components/mobile/mobile-bctList";
+import DepositToast from "../../components/mobile/mobile-deposit-toast";
+import WithdrawToast from "../../components/mobile/mobile-withdraw-toast";
 export default {
   components: {
     Notice,
     List,
     BctList,
+    DepositToast,
+    WithdrawToast
   },
   data() {
     return {
@@ -86,6 +94,8 @@ export default {
           num3: "651,245.00",
         },
       ],
+      depositToastShow:false,
+      withdrawToastShow:false,
     };
   },
 };

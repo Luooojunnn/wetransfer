@@ -30,7 +30,11 @@
             alt=""
             class="deposit-toast-icon"
           />
-          <p class="deposit-toast-table-num">0.15424813</p>
+          <input
+            type="number"
+            class="deposit-toast-ipt"
+            v-model="withdrawVal"
+          />
           <p class="deposit-toast-table-text">MAX</p>
         </div>
       </div>
@@ -41,7 +45,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      withdrawVal: 0,
+    };
   },
   methods: {
     closeToast() {
@@ -98,9 +104,12 @@ export default {
   border-radius: 30px;
   position: relative;
 }
-.deposit-toast-table-num {
+.deposit-toast-ipt {
   margin-left: 32px;
   font-size: 24px;
+  background: #000;
+  border: none;
+  color: #fff;
 }
 .deposit-toast-table-text {
   flex-grow: 1;

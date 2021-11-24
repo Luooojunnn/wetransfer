@@ -57,7 +57,7 @@
                 <p>{{ item.num }}<span class="pc-f14">%</span></p>
                 <div
                   class="list-item-btn purple-text pc-f20"
-                  @click="changeLoginToastFc"
+                  @click="depositToastShow=true"
                 >
                   Deposit
                 </div>
@@ -95,10 +95,10 @@
     </div>
     <Footer></Footer>
     <!-- 弹窗 -->
-    <!-- <DepositToast
+    <DepositToast
       @closeToast="depositToastShow = false"
       v-if="depositToastShow"
-    ></DepositToast> -->
+    ></DepositToast>
     <WakuangToast
       @closeToast="wakuangToastShow = false"
       v-if="wakuangToastShow"
@@ -109,7 +109,7 @@
 <script>
 import Notice from "../components/Notice";
 import Footer from "../components/Footer";
-// import DepositToast from "../components/Deposit-toast";
+import DepositToast from "../components/Deposit-toast";
 // import TopHeader from "../components/TopHeader.vue";
 import WakuangToast from "../components/Wa-kuang.vue";
 
@@ -120,7 +120,7 @@ export default {
     // TopHeader,
     Notice,
     Footer,
-    // DepositToast,
+    DepositToast,
     WakuangToast,
   },
   data() {
