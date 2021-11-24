@@ -11,10 +11,14 @@
     </div>
     <div class="end-menus">
       <div class="yuyan-menus">
-        <span class="yuyan-menus-icon"></span>
-        English
+        <img src="../assets/language.png" alt="" class="mobile-wallet" />
+        <span class="lan-desc">English</span>
+        <!-- <span class="yuyan-menus-icon"></span> -->
       </div>
-      <div class="Swap-menus">Swap</div>
+      <div class="swap-menus">
+        <img src="../assets/sw.png" alt="" class="mobile-wallet" />
+        <span class="sw-desc">Swap</span>
+      </div>
 
       <div class="wallet-menus" @click="changeLoginToastFc" v-if="!userInfo.adr">
         <img src="../assets/wallet.png" alt="" class="mobile-wallet" />
@@ -86,6 +90,7 @@ export default {
 }
 .icon-wrap {
   display: flex;
+  flex: 1;
   align-items: baseline;
 }
 .icon-wrap .deMac {
@@ -98,6 +103,7 @@ export default {
   margin-left: 17px;
 }
 .top-header-menus {
+  flex:2;
   display: flex;
   margin-right: 23 px;
   width: 40vw;
@@ -134,7 +140,7 @@ export default {
 .end-menus > div {
   margin-right: 10px;
 }
-.yuyan-menus {
+.yuyan-menus,.lan-desc {
   color: #9439ff;
 }
 .yuyan-menus-icon {
@@ -150,7 +156,9 @@ export default {
 .login-info-about-wallet-account {
   background: red;
 }
-.wallet-menus {
+.wallet-menus,
+.swap-menus,
+.yuyan-menus {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,17 +168,33 @@ export default {
   border: 1px solid #9439ff;
   border-radius: 16px;
 }
+.yuyan-menus {
+  outline: none;
+  border: none;
+  background: transparent;
+}
 .mobile-wallet {
   width: 24px;
   height: 22px;
   margin-right: 16px;
 }
-.wallet-desc {
-  width: 50px;
-  height: 16px;
+.wallet-desc,
+.sw-desc {
+  /* width: 50px;
+  height: 16px; */
+  height: 22px;
+  line-height: 22px;
   font-size: 20px;
   font-family: Barlow Condensed;
   font-weight: 600;
   color: #9439ff;
+}
+.sw-desc {
+  color: #fff;
+}
+.swap-menus {
+  background: #9439ff;
+  border: 1px solid #6f2ebc;
+  border-radius: 16px;
 }
 </style>

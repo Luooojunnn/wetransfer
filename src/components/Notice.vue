@@ -1,9 +1,10 @@
 <template>
   <div id="Notice-wrap">
     <div class="out-kuang">
-      <img src="../assets/bct.png" alt="" class="notice-img" />
+      <img src="../assets/notice.png" alt="" class="notice-img" />
       <span class="notice-desc"
-        >Notice: Important message notification window
+        >
+        {{noticeTxt}}
       </span>
     </div>
   </div>
@@ -14,18 +15,13 @@ export default {
   name: "TopHeader",
   data() {
     return {
-      lists: ["Home", "Lend", "Farm", "Bonus"],
-      curAc: "Home",
+      noticeTxt: 'Notice: Important message notification window'
     };
   },
   methods: {
-    goto(l) {
-      this.curAc = l;
-      this.$router.push({ path: l, query: {} });
-    },
+    
   },
   components: {
-    // currentAc: 'Home'
   },
 };
 </script>

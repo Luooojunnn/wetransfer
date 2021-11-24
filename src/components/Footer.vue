@@ -1,14 +1,14 @@
 <template>
   <div class="bottom row">
-    <p>Docs</p>
-    <p>faq</p>
-    <p>Audit</p>
+    <p class="link-txt">Docs</p>
+    <p class="link-txt">faq</p>
+    <p class="link-txt">Audit</p>
     <div class="row">
-      <img src="../assets/telegram-icon.png" alt="" class="bottom-icon" />
-      <img src="../assets/wechat-icon.png" alt="" class="bottom-icon" />
-      <img src="../assets/twitter-icon.png" alt="" class="bottom-icon" />
-      <img src="../assets/discord-icon.png" alt="" class="bottom-icon" />
-      <img src="../assets/github-icon.png" alt="" class="bottom-icon" />
+      <img src="../assets/ss.png" alt="" class="bottom-icon" />
+      <img src="../assets/wechat.png" alt="" class="bottom-icon" />
+      <img src="../assets/tw.png" alt="" class="bottom-icon" />
+      <img src="../assets/sy.png" alt="" class="bottom-icon" />
+      <img src="../assets/git.png" alt="" class="bottom-icon" />
     </div>
   </div>
 </template>
@@ -31,17 +31,29 @@ export default {
   bottom: 0;
   justify-content: center;
   z-index: 100;
+
 }
 .bottom p {
   margin-right: 14px;
 }
 .bottom .row {
   margin-left: 16px;
+  cursor: pointer;
+
 }
 .bottom-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 8px;
+}
+.link-txt {
+  height: 15px;
+  font-size: 20px;
+  font-family: Barlow Condensed;
+  font-weight: 500;
+  color: #6b6b6b;
+  cursor: pointer;
+
 }
 </style>
