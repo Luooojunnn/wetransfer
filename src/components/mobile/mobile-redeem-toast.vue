@@ -85,10 +85,7 @@ export default {
   height: 26rem;
   padding-top: 1.625rem;
 }
-.mobile-toast-close-img {
-  width: 19px;
-  height: 19px;
-}
+
 .mobile-close-box {
   margin-bottom: 2.0625rem;
 }
@@ -180,17 +177,17 @@ export default {
 }
 </style>
 <style>
-.el-slider__runway {
+.mobile-toast-bg .el-slider__runway {
   height: 4px;
   background-color: #fdfbfe;
 }
-.el-slider__button {
+.mobile-toast-bg .el-slider__button {
   border-color: #592cbd;
 }
-.el-slider__button {
+.mobile-toast-bg .el-slider__button {
   background-color: #592cbd;
 }
-.el-slider__bar {
+.mobile-toast-bg .el-slider__bar {
   background-color: #fdfbfe;
   height: 4px;
 }

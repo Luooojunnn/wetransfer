@@ -53,7 +53,7 @@
           <div v-if="mobilePage == 'lend'" class="mobile-list-btn">
             Withdraw
           </div>
-          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px">补仓</div>
+          <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px" @click="addClick">补仓</div>
           <div v-if="mobilePage == 'farm'" class="mobile-list-btn" style="width:80px" @click="redeemClick">赎回</div>
         </div>
       </div>
@@ -69,7 +69,10 @@ export default {
   methods:{
       redeemClick(){
           this.$emit('redeemClick')
-      }
+      },
+      addClick(){
+          this.$emit('addClick')
+      },
   }
 };
 </script>

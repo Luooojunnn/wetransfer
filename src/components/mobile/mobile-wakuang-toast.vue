@@ -337,11 +337,11 @@ height: 1.375rem; */
 }
 </style>
 <style>
-.el-progress-bar__inner {
+.mobile-toast-bg .el-progress-bar__inner {
   background-color: #00ff00;
 }
 .mobile-toast-bg .el-progress {
-  width: 1.5625rem;
+  margin-top: -2px;
 }
 .mobile-toast-bg .el-slider__runway {
   height: 0.0625rem;
@@ -351,7 +351,7 @@ height: 1.375rem; */
   height: 0.0625rem;
   background: #fff;
 }
-.el-slider__button {
+.mobile-toast-bg .el-slider__button {
   background: #592cbd;
   border-color: #592cbd;
 }
@@ -359,7 +359,7 @@ height: 1.375rem; */
   width: 0.375rem;
   height: 0.375rem;
 }
-.mobile-toast-bg .el-slider__button-wrapper{
-    top: -18px;
+.mobile-toast-bg .el-slider__button-wrapper {
+  top: -18px;
 }
 </style>

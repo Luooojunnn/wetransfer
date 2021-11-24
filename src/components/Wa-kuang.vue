@@ -325,21 +325,21 @@ height: 22px; */
 }
 </style>
 <style scoped>
-.el-progress-bar__inner {
+.toast-bg .el-progress-bar__inner {
   background-color: #00ff00;
 }
-.el-progress {
+.toast-bg .el-progress {
   width: 50px;
 }
 .el-slider__runway {
   height: 4px;
   background: #fff;
 }
-.el-slider__bar {
+.toast-bg .el-slider__bar {
   height: 4px;
   background: #fff;
 }
-.el-slider__button {
+.toast-bg .el-slider__button {
   background: #592cbd;
   border-color: #592cbd;
 }
