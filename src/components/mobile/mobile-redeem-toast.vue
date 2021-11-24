@@ -108,7 +108,7 @@ export default {
   position: absolute;
   left: 0;
   top: 0;
-  border: 0.0625rem solid #9439ff;
+  border: 1px solid #9439ff;
   border-radius: 0.5rem;
   padding-left: 0.9375rem;
   padding-right: 2.1875rem;
@@ -139,16 +139,16 @@ export default {
   justify-content: space-around;
 }
 .mobile-wakuang-Optimum-item > div {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Barlow Condensed;
   font-weight: 500;
   color: #ffffff;
   background: rgba(148, 57, 255, 0.1);
   border: 1px solid #9439ff;
-  border-radius: 16px;
-  width: 64px;
-  height: 21px;
-  line-height: 21px;
+  border-radius: 1rem;
+  width: 4rem;
+  height: 1.3125rem;
+  line-height: 1.3125rem;
   text-align: center;
 }
 .wakuang-Optimum-item > div:hover {
@@ -178,7 +178,7 @@ export default {
 </style>
 <style>
 .mobile-toast-bg .el-slider__runway {
-  height: 4px;
+  height: 0.25rem;
   background-color: #fdfbfe;
 }
 .mobile-toast-bg .el-slider__button {
@@ -189,6 +189,6 @@ export default {
 }
 .mobile-toast-bg .el-slider__bar {
   background-color: #fdfbfe;
-  height: 4px;
+  height: 0.25rem;
 }
 </style>

@@ -84,9 +84,9 @@ export default {
   flex-grow: 1;
   height: 1.8125rem;
   background: #10071b;
-  border: 0.0625rem solid #8032dd;
+  border: 1px solid #8032dd;
   text-align: center;
-  line-height: 29px;
+  line-height: 1.8125rem;
   border-radius: 0.625rem;
 }
 .mobile-line-text {

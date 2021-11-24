@@ -270,7 +270,7 @@ height: 1.375rem; */
   font-weight: 500;
   color: #ffffff;
   background: rgba(148, 57, 255, 0.1);
-  border: 0.0625rem solid #9439ff;
+  border: 1px solid #9439ff;
   border-radius: 1rem;
   width: 4rem;
   height: 1.3125rem;
@@ -304,7 +304,7 @@ height: 1.375rem; */
   text-align: center;
   font-size: 0.9375rem;
   background: rgba(148, 57, 255, 0.1);
-  border: 0.0625rem solid #9439ff;
+  border: 1px solid #9439ff;
   border-radius: 0.5rem;
 }
 
@@ -314,7 +314,7 @@ height: 1.375rem; */
   height: 1.8125rem;
   text-align: center;
   line-height: 1.8125rem;
-  border: 0.0625rem solid #9439ff;
+  border: 1px solid #9439ff;
   border-radius: 0.5rem;
   font-size: 0.9375rem;
 }
@@ -327,7 +327,7 @@ height: 1.375rem; */
   flex-grow: 1;
   height: 1.25rem;
   background: #10071b;
-  border: 0.0625rem solid #8032dd;
+  border: 1px solid #8032dd;
   text-align: center;
   line-height: 1.25rem;
   border-radius: 0.625rem;
@@ -341,7 +341,7 @@ height: 1.375rem; */
   background-color: #00ff00;
 }
 .mobile-toast-bg .el-progress {
-  margin-top: -2px;
+  margin-top: -0.125rem;
 }
 .mobile-toast-bg .el-slider__runway {
   height: 0.0625rem;
@@ -360,6 +360,6 @@ height: 1.375rem; */
   height: 0.375rem;
 }
 .mobile-toast-bg .el-slider__button-wrapper {
-  top: -18px;
+  top: -1.125rem;
 }
 </style>

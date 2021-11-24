@@ -78,6 +78,7 @@
      <!-- 弹窗 -->
     <RedeemToast @closeToast="redeemToastShow=false" v-if="redeemToastShow"></RedeemToast>
     <AddToast @closeToast="addToastShow=false" v-if="addToastShow"></AddToast>
+    <CalcToast @closeToast="calcToastShow=false" v-if="calcToastShow"></CalcToast>
   </div>
 </template>
 <script>
@@ -86,13 +87,15 @@ import List from "../../components/mobile/mobile-list";
 import BctList from "../../components/mobile/mobile-bctList";
 import RedeemToast from "../../components/mobile/mobile-redeem-toast";
 import AddToast from "../../components/mobile/mobile-add-toast";
+import CalcToast from "../../components/mobile/mobile-calc-toast";
 export default {
   components: {
     Notice,
     List,
     BctList,
     RedeemToast,
-    AddToast
+    AddToast,
+    CalcToast
   },
   data() {
     return {
@@ -149,7 +152,8 @@ export default {
         },
       ],
       redeemToastShow:false,
-      addToastShow:false
+      addToastShow:false,
+      calcToastShow:true
     };
   },
   methods: {
