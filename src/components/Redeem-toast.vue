@@ -159,7 +159,7 @@ export default {
   justify-content: space-between;
 }
 </style>
-<style>
+<style scoped>
 .el-slider__runway {
   height: 4px;
   background-color: #fdfbfe;

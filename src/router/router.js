@@ -1,6 +1,6 @@
 
 const routes = [
-    { path: '/', component: resolve => require(['../pages/home'], resolve)},
+    { path: '/',redirect:'/Home', component: resolve => require(['../pages/home'], resolve)},
     { path: '/Home', component: resolve => require(['../pages/home'], resolve)},
     { path: '/Farm', component: resolve => require(['../pages/farm'], resolve)},
     { path: '/Lend', component: resolve => require(['../pages/lend'], resolve)},

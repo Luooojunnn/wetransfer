@@ -40,7 +40,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .mobile-range-toast-icon {
   width: 22px;
   height: 22px;

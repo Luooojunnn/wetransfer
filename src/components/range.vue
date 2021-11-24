@@ -42,7 +42,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .range-toast-icon {
   width: 34px;
   height: 34px;
