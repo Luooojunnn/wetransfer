@@ -14,7 +14,7 @@
         <div class="deposit-toast-title-right">
           <div class="deposit-toast-title-top row">
             <img
-              src="../assets/list-icon.png"
+              src="../assets/btc.png"
               alt=""
               class="deposit-toast-icon"
             />
@@ -26,7 +26,7 @@
       <div class="deposit-toast-table-border">
         <div class="deposit-toast-table row">
           <img
-            src="../assets/list-icon.png"
+            src="../assets/btc.png"
             alt=""
             class="deposit-toast-icon"
           />

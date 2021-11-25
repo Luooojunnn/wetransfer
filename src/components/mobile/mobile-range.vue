@@ -1,7 +1,7 @@
 <template>
   <div class="mb17">
       <div class="mobile-range-toast-ipt-box row">
-        <img src="../../assets/list-icon.png" alt="" class="mobile-range-toast-icon" />
+        <img src="../../assets/btc.png" alt="" class="mobile-range-toast-icon" />
         <input type="number" class="mobile-range-toast-ipt" v-model="sliderNum" />
         <p class="mobile-range-toast-ipt-text">{{ sliderText }}</p>
       </div>

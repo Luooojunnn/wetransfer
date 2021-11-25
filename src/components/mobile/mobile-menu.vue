@@ -9,7 +9,21 @@
       :key="index"
       @click="toMobilePage(item.text, index)"
     >
-      <img :src="item.src" alt="" class="mobile-footer-img" />
+      <div class="mobile-footer-img-box">
+        <img
+          v-if="index != idx"
+          :src="item.src"
+          alt=""
+          class="mobile-footer-img"
+        />
+        <img
+          v-if="index == idx"
+          :src="item.srcActive"
+          alt=""
+          class="mobile-footer-img"
+        />
+      </div>
+
       {{ item.text }}
     </div>
   </div>
@@ -22,14 +36,17 @@ export default {
       footerList: [
         {
           src: require("../../assets/mobile-home.png"),
+          srcActive: require("../../assets/mobile-home-active.png"),
           text: "Home",
         },
         {
           src: require("../../assets/mobile-lend.png"),
+          srcActive: require("../../assets/mobile-lend-active.png"),
           text: "Lend",
         },
         {
           src: require("../../assets/mobile-farm.png"),
+          srcActive: require("../../assets/mobile-farm-active.png"),
           text: "Farm",
         },
       ],
@@ -71,6 +88,10 @@ export default {
   padding: 0.3125rem 2.125rem 0;
   box-sizing: border-box;
   color: #fff;
+}
+.mobile-footer-img-box {
+  width: 1.7rem;
+  height: 2.25rem;
 }
 .mobile-footer-img {
   width: 1.6875rem;

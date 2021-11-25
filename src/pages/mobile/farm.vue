@@ -4,7 +4,7 @@
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
       <div class="row f15 ml8" style="margin-bottom: 6px">
-        <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
+        <img src="../../assets/arrow2.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
       <div v-for="(item, index) in farmList" :key="index">
@@ -54,14 +54,14 @@
           <div class="row">
             <p>年化收益</p>
             <img
-              src="../../assets/arrow.png"
+              src="../../assets/tip2.png"
               alt=""
-              class="mobile-overview-tip-img"
+              class="mobile-overview-tip-img2"
             />
             <img
-              src="../../assets/arrow.png"
+              src="../../assets/arrow2.png"
               alt=""
-              class="mobile-overview-tip-img"
+              class="mobile-overview-tip-img2"
             />
             <img
               src="../../assets/arrow.png"
@@ -194,6 +194,10 @@ export default {
 }
 .mobile-overview-tip-img {
   width: 0.5rem;
+  margin-left: 0.375rem;
+}
+.mobile-overview-tip-img2 {
+  width: 0.875rem;
   margin-left: 0.375rem;
 }
 

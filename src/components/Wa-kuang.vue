@@ -67,7 +67,7 @@
         <p>Total APR</p>
         <p class="row">
           <span class="wakuang-total-num purple-text">345.86%</span
-          ><img src="../assets/tip.png" alt="" class="wakuang-tip-img" />
+          ><img src="../assets/gantanhao.png" alt="" class="wakuang-tip-img" />
         </p>
       </div>
       <div class="row flex-sp mt6">
@@ -324,7 +324,7 @@ height: 22px; */
   margin-bottom: 26px;
 }
 </style>
-<style scoped>
+<style>
 .toast-bg .el-progress-bar__inner {
   background-color: #00ff00;
 }

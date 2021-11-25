@@ -9,7 +9,7 @@
       <!-- <img src="../assets/home-title.png" alt="" class="home-title" /> -->
       <div class="home-position">
         <div class="position-title row">
-          <img src="../assets/bct.png" alt="" class="position-img" />
+          <img src="../assets/arrow2.png" alt="" class="position-img" />
           <p>Your position</p>
         </div>
       </div>
@@ -21,7 +21,7 @@
         <div class="row">
           <p>5MDX+6DEMA</p>
 
-          <img src="../assets/bct.png" alt="" class="gift-img" />
+          <img src="../assets/kongtou-gift.png" alt="" class="gift-img" />
         </div>
       </div>
       <div class="bct-box">
@@ -81,7 +81,7 @@
             <img src="../assets/search-icon.png" alt="" class="ipt-img" />
           </div>
           <div class="farm-right-bottom">
-            <img src="../assets/bct.png" alt="" class="farm-img" />
+            <img src="../assets/calc-icon.png" alt="" class="farm-img" />
             <p @click="calcToastShow=true">Impermanent Loss Calculator</p>
           </div>
         </div>
@@ -210,7 +210,6 @@ export default {
 }
 .position-img{
   width: 32px;
-  height: 26px;
   margin-right: 12px;
 }
 .bct {
@@ -227,7 +226,7 @@ export default {
 .gift-img {
   width: 57px;
   height: 50px;
-  margin-left: 12px;
+  margin-left: 13px;
 }
 .bct-box {
   padding: 18px 42px 42px 27px;
@@ -338,7 +337,7 @@ export default {
   justify-content: flex-end;
 }
 .farm-right-bottom .farm-img {
-  width: 20px;
+  width: 22px;
   height: 30px;
   margin-right: 22px;
 }

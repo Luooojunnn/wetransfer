@@ -47,7 +47,7 @@
             <li class="row" v-for="(item, index) in lendList" :key="index">
               <span class="list-icon">{{ index + 1 }}</span>
               <div class="list-item-left row">
-                <img src="../assets/list-icon.png" alt="" class="list-icon-img" />
+                <img src="../assets/btc.png" alt="" class="list-icon-img" />
                 <div class="list-item-text">
                   <p>BCT</p>
                   <p class="pc-f14">Bitcoin</p>
@@ -69,7 +69,7 @@
             <li class="row" v-for="(item, index) in farmList" :key="index">
               <span class="list-icon">{{ index + 1 }}</span>
               <div class="list-item-left row">
-                <img src="../assets/list-icon.png" alt="" class="list-icon-img" />
+                <img src="../assets/btc.png" alt="" class="list-icon-img" />
                 <div class="list-item-text">
                   <p>BCT</p>
                   <p class="pc-f14">Bitcoin</p>
