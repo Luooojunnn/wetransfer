@@ -133,6 +133,9 @@ export default {
   height: 10.3125rem;
   padding-top: 1.5rem;
 }
+.mobile-toast-bg{
+    margin-top: 10.9375rem;
+}
 .h231 {
   height: 14.4375rem !important;
 }

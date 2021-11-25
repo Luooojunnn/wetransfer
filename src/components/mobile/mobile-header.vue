@@ -5,20 +5,41 @@
       <div class="deMac purple-text f15">DeMac</div>
     </div>
     <div class="row">
-      <div class="Wallet-menus purple-text row f13" @click="changeLoginToastFc" v-if="!userInfo.adr">
+      <div
+        class="Wallet-menus purple-text row f13"
+        @click="changeLoginToastFc"
+        v-if="!userInfo.adr"
+      >
         <img src="../../assets/wallet.png" alt="" class="mobile-wallet" />
         Wallet
       </div>
-      <img src="../../assets/mobile-menu.png" alt="" class="mobile-menu" />
+      <img
+        src="../../assets/mobile-menu.png"
+        alt=""
+        class="mobile-menu"
+        @click="showMenu = true"
+      />
     </div>
+    <!-- 弹窗 -->
+    <Menu @closeToast="showMenu = false" v-if="showMenu"></Menu>
+    <Invite @closeToast="showInvite = false" v-if="showInvite"></Invite>
   </div>
 </template>
 <script>
+import Menu from "./mobile-header-menu.vue";
+import Invite from "./mobile-invite-toast.vue";
 import { mapState, mapMutations } from "vuex";
 
 export default {
+  components: {
+    Menu,
+    Invite
+  },
   data() {
-    return {};
+    return {
+      showMenu: false,
+      showInvite:true
+    };
   },
   computed: {
     ...mapState({
