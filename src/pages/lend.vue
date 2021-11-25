@@ -9,7 +9,7 @@
       <div class="first-lend-tabl-wrap">
         <div class="bct row">
           <div class="position-title row">
-            <img src="../assets/location.png" alt="" class="position-img" />
+            <img src="../assets/arrow2.png" alt="" class="position-img" />
             <p class="position-desc">Your position</p>
           </div>
           <div class="row">
@@ -29,7 +29,7 @@
           </div>
           <div class="farm-table-item row" v-for="(item, index) in lendList" :key="index">
             <div style="width: 5%">
-              <img src="../assets/list-icon.png" alt="" class="farm-table-item-img" />
+              <img src="../assets/btc.png" alt="" class="farm-table-item-img" />
             </div>
             <div class="pool">{{ item.pool }}<span class="bitconin">Bitcoin</span></div>
             <div class="balance">{{ item.balance }}</div>
@@ -66,7 +66,7 @@
         </div>
         <div class="farm-table-item row" v-for="(item, index) in list2" :key="index">
           <div style="width: 7%">
-            <img src="../assets/list-icon.png" alt="" class="farm-table-item-img" />
+            <img src="../assets/btc.png" alt="" class="farm-table-item-img" />
           </div>
           <div class="pool2">{{ item.pool }}<span class="bitconin">Bitcoin</span></div>
           <div class="tvl">{{ item.tvl }}</div>
@@ -158,7 +158,6 @@ export default {
 }
 .position-img {
   width: 32px;
-  height: 26px;
   margin-right: 12px;
 }
 .bct {
@@ -175,7 +174,7 @@ export default {
 .gift-img {
   width: 57px;
   height: 50px;
-  margin-left: 48px;
+  margin-left: 13px;
 }
 .bct-box {
   padding: 18px 42px 42px 27px;
@@ -320,7 +319,6 @@ export default {
 }
 .farm-table-item-img {
   width: 34px;
-  height: 30px;
   margin-right: 18px;
   margin-left: 12px;
 }

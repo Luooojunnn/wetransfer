@@ -50,7 +50,7 @@
               <span class="mobile-list-no">{{ index + 1 }}</span>
               <div class="list-item-left row">
                 <img
-                  src="../../assets/list-icon.png"
+                  src="../../assets/btc.png"
                   alt=""
                   class="mobile-list-icon-img"
                 />
@@ -86,7 +86,7 @@
               <span class="mobile-list-no">{{ index + 1 }}</span>
               <div class="list-item-left row">
                 <img
-                  src="../../assets/list-icon.png"
+                  src="../../assets/btc.png"
                   alt=""
                   class="mobile-list-icon-img"
                 />

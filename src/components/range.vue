@@ -2,7 +2,7 @@
   <div class="mb36">
     <div class="range-toast-ipt-border">
       <div class="range-toast-ipt-box row">
-        <img src="../assets/list-icon.png" alt="" class="range-toast-icon" />
+        <img src="../assets/btc.png" alt="" class="range-toast-icon" />
         <input type="number" class="range-toast-ipt" v-model="sliderNum" />
         <p class="range-toast-ipt-text">{{ sliderText }}</p>
       </div>

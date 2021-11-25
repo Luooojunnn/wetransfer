@@ -4,7 +4,7 @@
     <p class="mobile-title f20">High Profit Leverage Farm</p>
     <div class="mobile-main">
       <div class="row f15 ml8" style="margin-bottom: 6px">
-        <img src="../../assets/bct.png" alt="" class="mobile-position-img" />
+        <img src="../../assets/arrow2.png" alt="" class="mobile-position-img" />
         <p>Your position</p>
       </div>
       <div v-for="(item, index) in lendList" :key="index">

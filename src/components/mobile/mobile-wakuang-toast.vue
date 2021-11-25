@@ -72,7 +72,7 @@
         <p class="row">
           <span class="mobile-wakuang-total-num purple-text">345.86%</span
           ><img
-            src="../../assets/tip.png"
+            src="../../assets/gantanhao.png"
             alt=""
             class="mobile-wakuang-tip-img"
           />
