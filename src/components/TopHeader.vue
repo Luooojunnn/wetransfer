@@ -10,9 +10,11 @@
       </div>
     </div>
     <div class="end-menus">
-      <div class="yuyan-menus">
+      <div class="yuyan-menus" @click="changeLanguage">
         <img src="../assets/language.png" alt="" class="mobile-wallet" />
-        <span class="lan-desc">English</span>
+        <span class="lan-desc">
+          {{ $t("lang.changeLanguageDesc") }}
+        </span>
         <!-- <span class="yuyan-menus-icon"></span> -->
       </div>
       <div class="swap-menus">
@@ -72,6 +74,10 @@ export default {
         toastType: 1,
       });
     },
+    changeLanguage() {
+      console.log(this.$i18n.locale);
+      this.$i18n.locale = this.$i18n.locale === "zh-CN" ? "en-US" : "zh-CN";
+    },
   },
   components: {
     // currentAc: 'Home'
@@ -103,7 +109,7 @@ export default {
   margin-left: 17px;
 }
 .top-header-menus {
-  flex:2;
+  flex: 2;
   display: flex;
   margin-right: 23 px;
   width: 40vw;
@@ -140,7 +146,8 @@ export default {
 .end-menus > div {
   margin-right: 10px;
 }
-.yuyan-menus,.lan-desc {
+.yuyan-menus,
+.lan-desc {
   color: #9439ff;
 }
 .yuyan-menus-icon {
@@ -174,7 +181,7 @@ export default {
   background: transparent;
 }
 .mobile-wallet {
-  width: 24px;
+  width: 22px;
   height: 22px;
   margin-right: 16px;
 }
